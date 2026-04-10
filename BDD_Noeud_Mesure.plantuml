@@ -1,0 +1,67 @@
+@startuml BDD_Noeud_Mesure
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 11
+skinparam classBackgroundColor #EAF4FB
+skinparam classBorderColor #2C7BB6
+skinparam classBorderThickness 1.5
+skinparam ArrowColor #2C3E50
+skinparam shadowing false
+skinparam packageBackgroundColor #FFF8E1
+skinparam packageBorderColor #4A4A6A
+skinparam packageBorderThickness 1.5
+skinparam packageFontStyle bold
+skinparam packageFontSize 11
+skinparam classAttributeFontSize 10
+skinparam classHeaderBackgroundColor #D6EAF8
+skinparam classStereotypeFontSize 10
+skinparam minClassWidth 220
+skinparam roundCorner 8
+
+hide empty members
+
+title <b>Diagramme de Définition de Blocs - Nœud de mesure</b>\n<i>Décomposition fonctionnelle interne - Système EauSûre</i>
+
+class "Nœud de mesure" <<block>>
+
+package "Fonctions internes" #FFF8E1 {
+
+  class "Acquisition des mesures" <<block>> {
+    + collecter les paramètres physiques
+    + valider et filtrer les données
+  }
+
+  class "Détection d'événements" <<block>> {
+    + surveiller les conditions anormales
+    + déclencher des alertes prioritaires
+  }
+
+  class "Traitement local" <<block>> {
+    + préparer et encoder les données
+    + coordonner les fonctions du nœud
+  }
+
+  class "Communication" <<block>> {
+    + transmettre les données collectées
+    + recevoir les configurations distantes
+  }
+
+  class "Gestion énergie" <<block>> {
+    + surveiller le niveau d'alimentation
+    + optimiser la consommation du nœud
+  }
+
+  "Acquisition des mesures" -[hidden]down- "Détection d'événements"
+  "Détection d'événements"  -[hidden]down- "Traitement local"
+  "Traitement local"        -[hidden]down- "Communication"
+  "Communication"           -[hidden]down- "Gestion énergie"
+
+}
+
+"Nœud de mesure" *-down- "Acquisition des mesures"
+"Nœud de mesure" *-down- "Détection d'événements"
+"Nœud de mesure" *-down- "Traitement local"
+"Nœud de mesure" *-down- "Communication"
+"Nœud de mesure" *-down- "Gestion énergie"
+
+@enduml

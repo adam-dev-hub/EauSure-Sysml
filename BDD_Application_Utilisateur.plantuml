@@ -1,0 +1,60 @@
+@startuml BDD_Application_Utilisateur
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 11
+skinparam classBackgroundColor #FCE4EC
+skinparam classBorderColor #C62828
+skinparam classBorderThickness 1.5
+skinparam ArrowColor #2C3E50
+skinparam shadowing false
+skinparam packageBackgroundColor #FFEBEE
+skinparam packageBorderColor #4A4A6A
+skinparam packageBorderThickness 1.5
+skinparam packageFontStyle bold
+skinparam packageFontSize 11
+skinparam classAttributeFontSize 10
+skinparam classHeaderBackgroundColor #FFCDD2
+skinparam classStereotypeFontSize 10
+skinparam minClassWidth 220
+skinparam roundCorner 8
+
+hide empty members
+
+title <b>Diagramme de Définition de Blocs - Application utilisateur</b>\n<i>Décomposition fonctionnelle interne - Système EauSûre</i>
+
+class "Application utilisateur" <<block>>
+
+package "Fonctions internes" #FFEBEE {
+
+  class "Authentification utilisateur" <<block>> {
+    + vérifier l'identité de l'utilisateur
+    + gérer la session et les droits d'accès
+  }
+
+  class "Visualisation des données" <<block>> {
+    + afficher les mesures en temps réel
+    + présenter l'historique sous forme graphique
+  }
+
+  class "Gestion des alertes" <<block>> {
+    + recevoir et afficher les notifications
+    + permettre l'acquittement des alertes
+  }
+
+  class "Gestion des paramètres" <<block>> {
+    + configurer les préférences utilisateur
+    + définir les seuils d'alerte personnalisés
+  }
+
+  "Authentification utilisateur" -[hidden]down- "Visualisation des données"
+  "Visualisation des données"    -[hidden]down- "Gestion des alertes"
+  "Gestion des alertes"          -[hidden]down- "Gestion des paramètres"
+
+}
+
+"Application utilisateur" *-down- "Authentification utilisateur"
+"Application utilisateur" *-down- "Visualisation des données"
+"Application utilisateur" *-down- "Gestion des alertes"
+"Application utilisateur" *-down- "Gestion des paramètres"
+
+@enduml

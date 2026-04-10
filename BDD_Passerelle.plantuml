@@ -1,0 +1,67 @@
+@startuml BDD_Passerelle
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 11
+skinparam classBackgroundColor #EAF4FB
+skinparam classBorderColor #2C7BB6
+skinparam classBorderThickness 1.5
+skinparam ArrowColor #2C3E50
+skinparam shadowing false
+skinparam packageBackgroundColor #E8EAF6
+skinparam packageBorderColor #4A4A6A
+skinparam packageBorderThickness 1.5
+skinparam packageFontStyle bold
+skinparam packageFontSize 11
+skinparam classAttributeFontSize 10
+skinparam classHeaderBackgroundColor #C5CAE9
+skinparam classStereotypeFontSize 10
+skinparam minClassWidth 220
+skinparam roundCorner 8
+
+hide empty members
+
+title <b>Diagramme de Définition de Blocs - Passerelle de communication</b>\n<i>Décomposition fonctionnelle interne - Système EauSûre</i>
+
+class "Passerelle de communication" <<block>>
+
+package "Fonctions internes" #E8EAF6 {
+
+  class "Gestion communication" <<block>> {
+    + assurer la réception des données du nœud
+    + maintenir la liaison avec la plateforme
+  }
+
+  class "Relais des données" <<block>> {
+    + acheminer les données vers la plateforme
+    + garantir l'intégrité des données transmises
+  }
+
+  class "Supervision réseau" <<block>> {
+    + surveiller l'état de la connectivité
+    + détecter les interruptions de liaison
+  }
+
+  class "Interface avec la plateforme" <<block>> {
+    + formater les données pour la plateforme
+    + recevoir les configurations distantes
+  }
+
+  class "Alerte locale" <<block>> {
+    + signaler les anomalies de transmission
+    + notifier en cas de perte de connexion
+  }
+
+  "Gestion communication"     -[hidden]down- "Relais des données"
+  "Relais des données"        -[hidden]down- "Supervision réseau"
+  "Supervision réseau"        -[hidden]down- "Interface avec la plateforme"
+  "Interface avec la plateforme" -[hidden]down- "Alerte locale"
+
+}
+
+"Passerelle de communication" *-down- "Gestion communication"
+"Passerelle de communication" *-down- "Relais des données"
+"Passerelle de communication" *-down- "Supervision réseau"
+"Passerelle de communication" *-down- "Interface avec la plateforme"
+"Passerelle de communication" *-down- "Alerte locale"
+
+@enduml
