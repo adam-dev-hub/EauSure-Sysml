@@ -1,0 +1,1889 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?plantuml 1.2026.2?><svg
+   contentStyleType="text/css"
+   data-diagram-type="CLASS"
+   height="734.67999"
+   preserveAspectRatio="none"
+   version="1.1"
+   viewBox="0 0 808.62128 734.67999"
+   width="808.62128"
+   zoomAndPan="magnify"
+   id="svg104"
+   sodipodi:docname="BDD_Noeud_Mesure.svg"
+   inkscape:version="1.4.4rc (12926ee9f3, 2026-04-30)"
+   inkscape:export-filename="BDD_Noeud_Mesure.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview104"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.5426696"
+     inkscape:cx="662.88597"
+     inkscape:cy="410.00215"
+     inkscape:window-width="1536"
+     inkscape:window-height="795"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="ent0023" />
+  <defs
+     id="defs1" />
+  <polygon
+     fill="#ffffcc"
+     points="345.8015,809.9848 12,809.9848 12,340.9421 182.0268,340.9421 189.0268,365.924 345.8015,365.924 "
+     style="stroke:#000000;stroke-width:1.5"
+     id="polygon1"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#000000;stroke-width:1.5"
+     x1="0.75"
+     x2="177.77679"
+     y1="192.7153"
+     y2="192.7153"
+     id="line1" />
+  <text
+     fill="#333300"
+     font-family="Arial"
+     font-size="11px"
+     font-weight="bold"
+     lengthAdjust="spacing"
+     textLength="160.02679"
+     x="18"
+     y="356.70099"
+     id="text1"
+     transform="translate(-11.25,-173.20871)">Modules Logiciels (FreeRTOS)</text>
+  <polygon
+     fill="#ffffcc"
+     points="819.1213,907.1387 365.8015,907.1387 365.8015,340.9421 498.5936,340.9421 505.5936,365.924 819.1213,365.924 "
+     style="stroke:#000000;stroke-width:1.5"
+     id="polygon2"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#000000;stroke-width:1.5"
+     x1="354.55151"
+     x2="494.3436"
+     y1="192.7153"
+     y2="192.7153"
+     id="line2" />
+  <text
+     fill="#333300"
+     font-family="Arial"
+     font-size="11px"
+     font-weight="bold"
+     lengthAdjust="spacing"
+     textLength="122.7921"
+     x="371.80151"
+     y="356.70099"
+     id="text2"
+     transform="translate(-11.25,-173.20871)">Composants Matériels</text>
+  <g
+     class="entity"
+     data-qualified-name="Modules Logiciels .FreeRTOS..SoftPair"
+     data-source-line="56"
+     id="ent0008"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="122.1863"
+       style="stroke:#444444;stroke-width:0.5"
+       width="105.0065"
+       x="124.6564"
+       y="380.94211"
+       id="rect2" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="105.0065"
+       x="124.6564"
+       y="380.94211"
+       id="rect3" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="38.295502"
+       x="158.0119"
+       y="396.49399"
+       id="text3">«software»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="83.871597"
+       x="135.22391"
+       y="412.45901"
+       id="text4">Appairage &amp; FUOTA</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="125.6564"
+       x2="228.66299"
+       y1="422.0961"
+       y2="422.0961"
+       id="line4" />
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="125.6564"
+       x2="228.66299"
+       y1="430.0961"
+       y2="430.0961"
+       id="line5" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g5">
+      <circle
+         cx="135.6564"
+         cy="443.7251"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse5"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="48.2673"
+       x="146.6564"
+       y="445.7171"
+       id="text5">appairage()</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g6">
+      <circle
+         cx="135.6564"
+         cy="459.98318"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse6"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="75.0065"
+       x="146.6564"
+       y="461.97519"
+       id="text6">validerSignature()</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g7">
+      <circle
+         cx="135.6564"
+         cy="476.2413"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse7"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="67.068497"
+       x="146.6564"
+       y="478.23331"
+       id="text7">configDistante()</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g8">
+      <circle
+         cx="135.6564"
+         cy="492.49939"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse8"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="61.227402"
+       x="146.6564"
+       y="494.49139"
+       id="text8">màjFirmware()</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Modules Logiciels .FreeRTOS..SoftCom"
+     data-source-line="63"
+     id="ent0009"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="89.670097"
+       style="stroke:#444444;stroke-width:0.5"
+       width="107.8127"
+       x="211.9888"
+       y="543.12842"
+       id="rect8" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="107.8127"
+       x="211.9888"
+       y="543.12842"
+       id="rect9" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="38.295502"
+       x="246.74741"
+       y="558.6803"
+       id="text9">«software»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="97.812698"
+       x="216.9888"
+       y="574.64532"
+       id="text10">Pile de Communication</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="212.9888"
+       x2="318.80151"
+       y1="584.28229"
+       y2="584.28229"
+       id="line10" />
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="212.9888"
+       x2="318.80151"
+       y1="592.28229"
+       y2="592.28229"
+       id="line11" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g11">
+      <circle
+         cx="222.9888"
+         cy="605.91138"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse11"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="58.8694"
+       x="233.9888"
+       y="607.90338"
+       id="text11">chiffrageAES()</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g12">
+      <circle
+         cx="222.9888"
+         cy="622.16949"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse12"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="64.1614"
+       x="233.9888"
+       y="624.1615"
+       id="text12">gestionTrame()</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Modules Logiciels .FreeRTOS..SoftAcq"
+     data-source-line="68"
+     id="ent0010"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="122.1863"
+       style="stroke:#444444;stroke-width:0.5"
+       width="117.4986"
+       x="74.490196"
+       y="543.12842"
+       id="rect12" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="117.4986"
+       x="74.490196"
+       y="543.12842"
+       id="rect13" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="38.295502"
+       x="114.0918"
+       y="558.6803"
+       id="text13">«software»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="94.824699"
+       x="85.827202"
+       y="574.64532"
+       id="text14">Contrôleur Acquisition</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="75.490196"
+       x2="190.9888"
+       y1="584.28229"
+       y2="584.28229"
+       id="line14" />
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="75.490196"
+       x2="190.9888"
+       y1="592.28229"
+       y2="592.28229"
+       id="line15" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g15">
+      <circle
+         cx="85.490196"
+         cy="605.91138"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse15"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="87.498596"
+       x="96.490196"
+       y="607.90338"
+       id="text15">mesurerQualitéEau()</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g16">
+      <circle
+         cx="85.490196"
+         cy="622.16949"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse16"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="84.051598"
+       x="96.490196"
+       y="624.1615"
+       id="text16">détecterSecousses()</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g17">
+      <circle
+         cx="85.490196"
+         cy="638.42749"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse17"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="80.640503"
+       x="96.490196"
+       y="640.41962"
+       id="text17">monitorerEnergie()</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g18">
+      <circle
+         cx="85.490196"
+         cy="654.68561"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse18"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="81.4776"
+       x="96.490196"
+       y="656.67767"
+       id="text18">gérerMiseEnVeille()</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Modules Logiciels .FreeRTOS..SoftDisp"
+     data-source-line="75"
+     id="ent0011"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="89.670097"
+       style="stroke:#444444;stroke-width:0.5"
+       width="109.4706"
+       x="27"
+       y="705.3147"
+       id="rect18" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="109.4706"
+       x="27"
+       y="705.3147"
+       id="rect19" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="38.295502"
+       x="62.587601"
+       y="720.86658"
+       id="text19">«software»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="87.930603"
+       x="37.77"
+       y="736.8316"
+       id="text20">Contrôleur Affichage</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="28"
+       x2="135.4706"
+       y1="746.46863"
+       y2="746.46863"
+       id="line20" />
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="28"
+       x2="135.4706"
+       y1="754.46863"
+       y2="754.46863"
+       id="line21" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g21">
+      <circle
+         cx="38"
+         cy="768.09772"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse21"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="60.993401"
+       x="49"
+       y="770.08972"
+       id="text21">màjAffichage()</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g22">
+      <circle
+         cx="38"
+         cy="784.35571"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse22"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="79.470596"
+       x="49"
+       y="786.34778"
+       id="text22">activierIndicateur()</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Modules Logiciels .FreeRTOS..SoftState"
+     data-source-line="80"
+     id="ent0012"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="81.670097"
+       style="stroke:#444444;stroke-width:0.5"
+       width="107.5446"
+       x="156.4706"
+       y="705.3147"
+       id="rect22" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="107.5446"
+       x="156.4706"
+       y="705.3147"
+       id="rect23" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="32.071602"
+       x="194.20711"
+       y="720.86658"
+       id="text23">«shared»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="52.011398"
+       x="184.2372"
+       y="736.8316"
+       id="text24">État Partagé</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="157.4706"
+       x2="263.0152"
+       y1="746.46863"
+       y2="746.46863"
+       id="line24" />
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g24">
+      <circle
+         cx="167.4706"
+         cy="760.09772"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse24"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="63.459499"
+       x="178.4706"
+       y="762.08972"
+       id="text25">verrous_mutex</text>
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g25">
+      <circle
+         cx="167.4706"
+         cy="776.35571"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse25"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="77.544601"
+       x="178.4706"
+       y="778.34778"
+       id="text26">variables_globales</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Composants Mat.riels.HardMCU"
+     data-source-line="97"
+     id="ent0018"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="89.670097"
+       style="stroke:#444444;stroke-width:0.5"
+       width="105.1955"
+       x="573.80811"
+       y="380.94211"
+       id="rect26" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="105.1955"
+       x="573.80811"
+       y="380.94211"
+       id="rect27" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.127499"
+       x="605.34222"
+       y="396.49399"
+       id="text27">«hardware»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="68.3825"
+       x="592.2146"
+       y="412.45901"
+       id="text28">Microcontrôleur</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="574.80811"
+       x2="678.0036"
+       y1="422.0961"
+       y2="422.0961"
+       id="line28" />
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g28">
+      <circle
+         cx="584.80811"
+         cy="435.7251"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse28"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="62.469501"
+       x="595.80811"
+       y="437.7171"
+       id="text29">Mémoire Flash</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="574.80811"
+       x2="678.0036"
+       y1="446.3541"
+       y2="446.3541"
+       id="line29" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g29">
+      <circle
+         cx="584.80811"
+         cy="459.98318"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse29"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="75.195503"
+       x="595.80811"
+       y="461.97519"
+       id="text30">ESP32 (Dual Core)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Composants Mat.riels.HardRadio"
+     data-source-line="102"
+     id="ent0019"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="73.412003"
+       style="stroke:#444444;stroke-width:0.5"
+       width="105.1325"
+       x="405.66669"
+       y="516.03162"
+       id="rect30" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="105.1325"
+       x="405.66669"
+       y="516.03162"
+       id="rect31" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.127499"
+       x="437.16931"
+       y="531.5835"
+       id="text31">«hardware»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="58.392399"
+       x="429.0368"
+       y="547.54852"
+       id="text32">Module Radio</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="406.66669"
+       x2="509.79929"
+       y1="557.18549"
+       y2="557.18549"
+       id="line32" />
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="406.66669"
+       x2="509.79929"
+       y1="565.18549"
+       y2="565.18549"
+       id="line33" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g33">
+      <circle
+         cx="416.66669"
+         cy="578.81458"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse33"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="75.1325"
+       x="427.66669"
+       y="580.80658"
+       id="text33">LoRa SX1276 (SPI)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Composants Mat.riels.HardSensors"
+     data-source-line="106"
+     id="ent0020"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="122.1863"
+       style="stroke:#444444;stroke-width:0.5"
+       width="232.2944"
+       x="380.80151"
+       y="640.28229"
+       id="rect33" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="232.2944"
+       x="380.80151"
+       y="640.28229"
+       id="rect34" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.127499"
+       x="475.88501"
+       y="655.83423"
+       id="text34">«hardware»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="71.991501"
+       x="460.953"
+       y="671.79919"
+       id="text35">Grappe Capteurs</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="381.80151"
+       x2="612.09589"
+       y1="681.43628"
+       y2="681.43628"
+       id="line35" />
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="381.80151"
+       x2="612.09589"
+       y1="689.43628"
+       y2="689.43628"
+       id="line36" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g36">
+      <circle
+         cx="391.80151"
+         cy="703.06531"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse36"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="124.8939"
+       x="402.80151"
+       y="705.05731"
+       id="text36">Sondes Qualité de l'eau (ADC)</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g37">
+      <circle
+         cx="391.80151"
+         cy="719.32343"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse37"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="171.9102"
+       x="402.80151"
+       y="721.31543"
+       id="text37">Capteur Température de l'eau (OneWire)</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g38">
+      <circle
+         cx="391.80151"
+         cy="735.58148"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse38"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="202.2944"
+       x="402.80151"
+       y="737.57349"
+       id="text38">Capteur Température ESP-S3/Gy-521 (GPIO/I2C)</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g39">
+      <circle
+         cx="391.80151"
+         cy="751.8396"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse39"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="62.406399"
+       x="402.80151"
+       y="753.8316"
+       id="text39">MPU6050 (I2C)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Composants Mat.riels.HardPower"
+     data-source-line="113"
+     id="ent0021"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="89.670097"
+       style="stroke:#444444;stroke-width:0.5"
+       width="207.2742"
+       x="574.84711"
+       y="510.61221"
+       id="rect39" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="207.2742"
+       x="574.84711"
+       y="510.61221"
+       id="rect40" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.127499"
+       x="657.42047"
+       y="526.16412"
+       id="text40">«hardware»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="62.370399"
+       x="647.29901"
+       y="542.12909"
+       id="text41">Énergie &amp; Alim</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="575.84711"
+       x2="781.12128"
+       y1="551.76617"
+       y2="551.76617"
+       id="line41" />
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g41">
+      <circle
+         cx="585.84711"
+         cy="565.3952"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse41"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="177.2742"
+       x="596.84711"
+       y="567.38721"
+       id="text42">Batterie / Régulateur 3V3 / Booster DC-DC</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="575.84711"
+       x2="781.12128"
+       y1="576.02417"
+       y2="576.02417"
+       id="line42" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g42">
+      <circle
+         cx="585.84711"
+         cy="589.65332"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse42"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="94.149696"
+       x="596.84711"
+       y="591.64532"
+       id="text43">Moniteur INA219 (I2C)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Composants Mat.riels.HardMemo"
+     data-source-line="118"
+     id="ent0022"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="89.670097"
+       style="stroke:#444444;stroke-width:0.5"
+       width="170.87801"
+       x="439.98941"
+       y="802.46863"
+       id="rect43" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="170.87801"
+       x="439.98941"
+       y="802.46863"
+       id="rect44" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.127499"
+       x="504.36469"
+       y="818.02051"
+       id="text44">«hardware»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="57.942402"
+       x="496.45721"
+       y="833.98547"
+       id="text45">Stockage NVS</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="440.98941"
+       x2="609.86737"
+       y1="843.6225"
+       y2="843.6225"
+       id="line45" />
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g45">
+      <circle
+         cx="450.98941"
+         cy="857.25159"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse45"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="131.5809"
+       x="461.98941"
+       y="859.24359"
+       id="text46">Mémoire Flash interne du MCU</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="440.98941"
+       x2="609.86737"
+       y1="867.88062"
+       y2="867.88062"
+       id="line46" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g46">
+      <circle
+         cx="450.98941"
+         cy="881.5097"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse46"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="140.87801"
+       x="461.98941"
+       y="883.50171"
+       id="text47">gestionNVS(Config, FUOTA, KEYS)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Composants Mat.riels.HardUI"
+     data-source-line="123"
+     id="ent0023"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="89.670097"
+       style="stroke:#444444;stroke-width:0.5"
+       width="136.1647"
+       x="633.09589"
+       y="640.28229"
+       id="rect47" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="136.1647"
+       x="633.09589"
+       y="640.28229"
+       id="rect48" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="42.127499"
+       x="680.11462"
+       y="655.83423"
+       id="text48">«hardware»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="58.419399"
+       x="671.96863"
+       y="671.79919"
+       id="text49">Interface IHM</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="634.09589"
+       x2="768.26068"
+       y1="681.43628"
+       y2="681.43628"
+       id="line49" />
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="634.09589"
+       x2="768.26068"
+       y1="689.43628"
+       y2="689.43628"
+       id="line50" />
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g50">
+      <circle
+         cx="644.09589"
+         cy="703.06531"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse50"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="44.946301"
+       x="655.09589"
+       y="705.05731"
+       id="text50">OLED (I2C)</text>
+    <g
+       data-visibility-modifier="PUBLIC_METHOD"
+       id="g51">
+      <circle
+         cx="644.09589"
+         cy="719.32343"
+         fill="#84be84"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse51"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="106.1647"
+       x="655.09589"
+       y="721.31543"
+       id="text51">LED Neopixel RGB (GPIO)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Gateway"
+     data-source-line="41"
+     id="ent0002"
+     transform="translate(191.01798,-11.75)">
+    <rect
+       fill="#ffffff"
+       height="49.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="68.545403"
+       x="468.73901"
+       y="12"
+       id="rect51" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="68.545403"
+       x="468.73901"
+       y="12"
+       id="rect52" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="36.559502"
+       x="484.7319"
+       y="27.551901"
+       id="text52">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="58.545399"
+       x="473.73901"
+       y="43.516899"
+       id="text53">Passerelle IoT</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="469.73901"
+       x2="536.28442"
+       y1="53.1539"
+       y2="53.1539"
+       id="line53" />
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ApiPair"
+     data-source-line="42"
+     id="ent0003"
+     transform="translate(-236.10985,-11.042486)">
+    <rect
+       fill="#ffffff"
+       height="49.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="77.716499"
+       x="371.02249"
+       y="12"
+       id="rect53" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="77.716499"
+       x="371.02249"
+       y="12"
+       id="rect54" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="36.559502"
+       x="391.60101"
+       y="27.551901"
+       id="text54">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="67.716499"
+       x="376.02249"
+       y="43.516899"
+       id="text55">API d'Appairage</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="372.02249"
+       x2="447.73901"
+       y1="53.1539"
+       y2="53.1539"
+       id="line55" />
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Node"
+     data-source-line="43"
+     id="ent0004"
+     transform="translate(-11.25,-173.20871)">
+    <rect
+       fill="#ffffff"
+       height="81.670097"
+       style="stroke:#444444;stroke-width:0.5"
+       width="184.981"
+       x="348.2204"
+       y="174.272"
+       id="rect55" />
+    <rect
+       fill="#b8d9f5"
+       height="41.1539"
+       style="stroke:#444444;stroke-width:0.5"
+       width="184.981"
+       x="348.2204"
+       y="174.272"
+       id="rect56" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="8px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="31.927601"
+       x="424.7471"
+       y="189.8239"
+       id="text56">«system»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="73.647499"
+       x="403.88721"
+       y="205.78889"
+       id="text57">Nœud de Mesure</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="349.2204"
+       x2="532.20142"
+       y1="215.4259"
+       y2="215.4259"
+       id="line57" />
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g57">
+      <circle
+         cx="359.2204"
+         cy="229.05499"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse57"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="87.354599"
+       x="370.2204"
+       y="231.047"
+       id="text58">ID : addr unique Hex</text>
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g58">
+      <circle
+         cx="359.2204"
+         cy="245.3131"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse58"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="9px"
+       lengthAdjust="spacing"
+       textLength="154.981"
+       x="370.2204"
+       y="247.3051"
+       id="text59">Mode : Normal | Appairage | FUOTA</text>
+  </g>
+  <line
+     style="stroke:#181818;stroke-width:2.08969"
+     x1="659.83191"
+     x2="522.40668"
+     y1="25.702881"
+     y2="25.702881"
+     id="line60" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="30.056"
+     x="513.39172"
+     y="122.757"
+     id="text61"
+     transform="translate(65.834338,-102.41697)">LoRa</text>
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="7.4359999"
+     x="508.01169"
+     y="79.051003"
+     id="text62"
+     transform="translate(140.38868,-58.30867)">1</text>
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="21.566999"
+     x="476.54111"
+     y="166.463"
+     id="text63"
+     transform="translate(50.889415,-146.46516)">1..*</text>
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="217.79283"
+     x2="330.91092"
+     y1="18.173782"
+     y2="18.173782"
+     id="line63" />
+  <polygon
+     fill="#181818"
+     points="413.8807,165.272 409.8807,169.272 405.8807,165.272 409.8807,174.272 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon63"
+     transform="rotate(-90,294.58789,133.42772)" />
+  <polygon
+     fill="#181818"
+     points="413.8807,70.1539 409.8807,61.1539 405.8807,70.1539 409.8807,66.1539 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon64"
+     transform="rotate(-90,290.13896,137.97915)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="39.091"
+     x="361.4097"
+     y="122.757"
+     id="text64"
+     transform="translate(-107.9987,-84.953977)">HTTPS</text>
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="383.21561"
+     x2="383.21561"
+     y1="82.733383"
+     y2="112.7334"
+     id="line64" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="383.21561"
+     x2="165.9097"
+     y1="112.7334"
+     y2="112.7334"
+     id="line65" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="165.9097"
+     x2="165.9097"
+     y1="112.7334"
+     y2="207.7334"
+     id="line66" />
+  <polygon
+     fill="#181818"
+     points="177.1597,380.9421 181.1597,371.9421 177.1597,375.9421 173.1597,371.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon66"
+     transform="translate(-11.25,-173.20871)" />
+  <polygon
+     fill="#181818"
+     points="394.4656,255.9421 390.4656,261.9421 394.4656,267.9421 398.4656,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon67"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="398.63071"
+     x2="398.63071"
+     y1="82.733383"
+     y2="122.7334"
+     id="line67" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="398.63071"
+     x2="272.61401"
+     y1="122.7334"
+     y2="122.7334"
+     id="line68" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="272.61401"
+     x2="272.61401"
+     y1="122.7334"
+     y2="369.91971"
+     id="line69" />
+  <polygon
+     fill="#181818"
+     points="283.864,543.1284 287.864,534.1284 283.864,538.1284 279.864,534.1284 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon69"
+     transform="translate(-11.25,-173.20871)" />
+  <polygon
+     fill="#181818"
+     points="409.8807,255.9421 405.8807,261.9421 409.8807,267.9421 413.8807,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon70"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="367.8006"
+     x2="367.8006"
+     y1="82.733383"
+     y2="102.7334"
+     id="line70" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="367.8006"
+     x2="102.4064"
+     y1="102.7334"
+     y2="102.7334"
+     id="line71" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="102.4064"
+     x2="102.4064"
+     y1="102.7334"
+     y2="369.91971"
+     id="line72" />
+  <polygon
+     fill="#181818"
+     points="113.6564,543.1284 117.6564,534.1284 113.6564,538.1284 109.6564,534.1284 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon72"
+     transform="translate(-11.25,-173.20871)" />
+  <polygon
+     fill="#181818"
+     points="379.0506,255.9421 375.0506,261.9421 379.0506,267.9421 383.0506,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon73"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="352.3855"
+     x2="352.3855"
+     y1="82.733383"
+     y2="92.733398"
+     id="line73" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="352.3855"
+     x2="52.2402"
+     y1="92.733398"
+     y2="92.733398"
+     id="line74" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="52.2402"
+     x2="52.2402"
+     y1="92.733398"
+     y2="532.10596"
+     id="line75" />
+  <polygon
+     fill="#181818"
+     points="63.4902,705.3147 67.4902,696.3147 63.4902,700.3147 59.4902,696.3147 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon75"
+     transform="translate(-11.25,-173.20871)" />
+  <polygon
+     fill="#181818"
+     points="363.6355,255.9421 359.6355,261.9421 363.6355,267.9421 367.6355,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon76"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="414.04581"
+     x2="414.04581"
+     y1="82.733383"
+     y2="132.7334"
+     id="line76" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="414.04581"
+     x2="318.55151"
+     y1="132.7334"
+     y2="132.7334"
+     id="line77" />
+  <line
+     style="stroke:#181818;stroke-width:0.993372"
+     x1="318.55151"
+     x2="318.55151"
+     y1="132.7334"
+     y2="516.96118"
+     id="line78" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="318.82962"
+     x2="217.1951"
+     y1="516.54401"
+     y2="516.54401"
+     id="line79" />
+  <line
+     style="stroke:#181818;stroke-width:1.26683"
+     x1="216.91701"
+     x2="216.91701"
+     y1="516.05737"
+     y2="532.10596"
+     id="line80" />
+  <polygon
+     fill="#181818"
+     points="232.167,696.3147 228.167,700.3147 224.167,696.3147 228.167,705.3147 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon80"
+     transform="translate(-11.319524,-172.51347)" />
+  <polygon
+     fill="#181818"
+     points="425.2958,255.9421 421.2958,261.9421 425.2958,267.9421 429.2958,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon81"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="460.29111"
+     x2="460.29111"
+     y1="82.733383"
+     y2="122.7334"
+     id="line81" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="460.29111"
+     x2="615.15588"
+     y1="122.7334"
+     y2="122.7334"
+     id="line82" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="615.15588"
+     x2="615.15588"
+     y1="122.7334"
+     y2="207.7334"
+     id="line83" />
+  <polygon
+     fill="#181818"
+     points="626.4059,380.9421 630.4059,371.9421 626.4059,375.9421 622.4059,371.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon83"
+     transform="translate(-11.25,-173.20871)" />
+  <polygon
+     fill="#181818"
+     points="471.5411,255.9421 467.5411,261.9421 471.5411,267.9421 475.5411,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon84"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="429.46091"
+     x2="429.46091"
+     y1="82.733383"
+     y2="342.82291"
+     id="line84" />
+  <polygon
+     fill="#181818"
+     points="440.7109,516.0316 444.7109,507.0316 440.7109,511.0316 436.7109,507.0316 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon85"
+     transform="translate(-11.25,-173.20871)" />
+  <polygon
+     fill="#181818"
+     points="440.7109,255.9421 436.7109,261.9421 440.7109,267.9421 444.7109,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon86"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="444.87601"
+     x2="444.87601"
+     y1="82.733383"
+     y2="132.7334"
+     id="line86" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="444.87601"
+     x2="524.41449"
+     y1="132.7334"
+     y2="132.7334"
+     id="line87" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="524.41449"
+     x2="524.41449"
+     y1="132.7334"
+     y2="467.07358"
+     id="line88" />
+  <polygon
+     fill="#181818"
+     points="535.6645,640.2823 539.6645,631.2823 535.6645,635.2823 531.6645,631.2823 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon88"
+     transform="translate(-11.25,-173.20871)" />
+  <polygon
+     fill="#181818"
+     points="456.126,255.9421 452.126,261.9421 456.126,267.9421 460.126,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon89"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="475.70621"
+     x2="475.70621"
+     y1="82.733383"
+     y2="112.7334"
+     id="line89" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="475.70621"
+     x2="701.77991"
+     y1="112.7334"
+     y2="112.7334"
+     id="line90" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="701.77991"
+     x2="701.77991"
+     y1="112.7334"
+     y2="337.4035"
+     id="line91" />
+  <polygon
+     fill="#181818"
+     points="713.0299,510.6122 717.0299,501.6122 713.0299,505.6122 709.0299,501.6122 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon91"
+     transform="translate(-11.25,-173.20871)" />
+  <polygon
+     fill="#181818"
+     points="486.9562,255.9421 482.9562,261.9421 486.9562,267.9421 490.9562,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon92"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="491.12131"
+     x2="491.12131"
+     y1="82.733383"
+     y2="102.7334"
+     id="line92" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="491.12131"
+     x2="780.87128"
+     y1="102.7334"
+     y2="102.7334"
+     id="line93" />
+  <line
+     style="stroke:#181818;stroke-width:0.977975"
+     x1="780.87128"
+     x2="780.87128"
+     y1="102.7334"
+     y2="441.63705"
+     id="line94" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="780.9696"
+     x2="712.7207"
+     y1="441.14545"
+     y2="441.14545"
+     id="line95" />
+  <line
+     style="stroke:#181818;stroke-width:1.62692"
+     x1="712.79443"
+     x2="712.79443"
+     y1="440.60468"
+     y2="467.07358"
+     id="line96" />
+  <polygon
+     fill="#181818"
+     points="727.8724,631.2823 723.8724,635.2823 719.8724,631.2823 723.8724,640.2823 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon96"
+     transform="translate(-11.102517,-172.07801)" />
+  <polygon
+     fill="#181818"
+     points="502.3713,255.9421 498.3713,261.9421 502.3713,267.9421 506.3713,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon97"
+     transform="translate(-11.25,-173.20871)" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="506.53632"
+     x2="506.53632"
+     y1="82.733383"
+     y2="92.733398"
+     id="line97" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="506.53632"
+     x2="794.87128"
+     y1="92.733398"
+     y2="92.733398"
+     id="line98" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="794.87128"
+     x2="794.87128"
+     y1="92.733398"
+     y2="152.7334"
+     id="line99" />
+  <line
+     style="stroke:#181818;stroke-width:0.98559"
+     x1="794.90369"
+     x2="794.90369"
+     y1="152.53674"
+     y2="605.7146"
+     id="line101" />
+  <line
+     style="stroke:#181818;stroke-width:1.0064"
+     x1="795.0694"
+     x2="542.65808"
+     y1="605.25989"
+     y2="605.25989"
+     id="line102" />
+  <line
+     style="stroke:#181818;stroke-width:1.42197"
+     x1="543.28381"
+     x2="543.28381"
+     y1="604.79889"
+     y2="625.01892"
+     id="line103" />
+  <polygon
+     fill="#181818"
+     points="553.9081,797.4686 549.9081,793.4686 553.9081,802.4686 557.9081,793.4686 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon103"
+     transform="translate(-10.554759,-173.97347)" />
+  <polygon
+     fill="#181818"
+     points="517.7863,255.9421 513.7863,261.9421 517.7863,267.9421 521.7863,261.9421 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon104"
+     transform="translate(-11.25,-173.20871)" />
+</svg>

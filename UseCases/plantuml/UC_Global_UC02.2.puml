@@ -1,0 +1,42 @@
+@startuml EauSure_UC02_Admin_Part2
+
+top to bottom direction
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam actorStyle awesome
+skinparam usecaseBorderColor #1A6B3C
+skinparam usecaseBackgroundColor #EAF7EF
+skinparam usecaseBorderThickness 1.5
+skinparam ArrowColor #444444
+skinparam ArrowFontSize 10
+skinparam actorBackgroundColor #FFF8E7
+skinparam actorBorderColor #E69500
+skinparam shadowing false
+
+actor "Administrateur\n(propriétaire)" as Admin
+
+rectangle "[uc_02.2] Système EauSûre - Vue administrateur (suite)" {
+
+  usecase "Maintenir le système" as UC_MaintainSystem
+  usecase "Développer une nouvelle\nversion du firmware" as UC_DevelopFirmware
+  usecase "Déployer les mises\nà jour du firmware" as UC_AdminDeployUpdates
+
+  usecase "Traiter les réclamations\net les incidents" as UC_HandleIssues
+  usecase "Fournir la documentation\net l'assistance" as UC_DocumentSupport
+}
+
+Admin --> UC_MaintainSystem
+Admin --> UC_HandleIssues
+Admin --> UC_DocumentSupport
+
+' Maintenance
+UC_MaintainSystem <.. UC_DevelopFirmware : <<extend>>
+UC_MaintainSystem <.. UC_AdminDeployUpdates : <<extend>>
+UC_DevelopFirmware <.. UC_AdminDeployUpdates : <<include>>
+
+' Espacement vertical
+UC_MaintainSystem -[hidden]down-> UC_HandleIssues
+UC_HandleIssues -[hidden]right- UC_DocumentSupport
+
+@enduml

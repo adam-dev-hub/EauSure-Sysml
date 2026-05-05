@@ -1,0 +1,49 @@
+@startuml EauSure_UC01_User_Part1
+
+top to bottom direction
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam actorStyle awesome
+skinparam usecaseBorderColor #2C7BB6
+skinparam usecaseBackgroundColor #EAF4FB
+skinparam usecaseBorderThickness 1.5
+skinparam ArrowColor #444444
+skinparam ArrowFontSize 10
+skinparam actorBackgroundColor #FFF8E7
+skinparam actorBorderColor #E69500
+skinparam shadowing false
+
+actor "Utilisateur" as User
+
+rectangle "[uc_01.1] Système EauSûre - Vue utilisateur" {
+
+  usecase "Accéder au\ntableau de bord"                 as UC_Dashboard
+  usecase "Superviser les métriques\nen temps réel"     as UC_Realtime
+  usecase "Consulter l'historique\net les statistiques" as UC_HistoryStats
+  usecase "Consulter les alertes"                       as UC_ViewAlerts
+
+  usecase "Gérer le hardware"                        as UC_HardwareMgmt
+  usecase "Mettre en service\nla passerelle"         as UC_RegisterGateway
+  usecase "Jumeler le noeud\nde mesurage"            as UC_PairNode
+  usecase "Consulter l'état\nde fonctionnement"      as UC_HealthStatus
+}
+
+User --> UC_Dashboard
+User --> UC_HardwareMgmt
+
+' Dashboard
+UC_Dashboard <.. UC_Realtime     : <<extend>>
+UC_Dashboard <.. UC_HistoryStats : <<extend>>
+UC_Dashboard <.. UC_ViewAlerts   : <<extend>>
+
+' Hardware
+UC_HardwareMgmt <.. UC_RegisterGateway : <<extend>>
+UC_HardwareMgmt <.. UC_PairNode        : <<extend>>
+UC_HardwareMgmt <.. UC_HealthStatus    : <<extend>>
+UC_RegisterGateway <.. UC_PairNode     : <<include>>
+
+' Espacement vertical
+UC_Dashboard -[hidden]down-> UC_HardwareMgmt
+
+@enduml

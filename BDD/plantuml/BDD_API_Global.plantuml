@@ -1,0 +1,146 @@
+@startuml BDD_API_Global_EauSure
+!pragma layout elk
+top to bottom direction
+
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam roundCorner 0
+skinparam nodesep 18
+skinparam ranksep 28
+skinparam padding 2
+
+skinparam class {
+    BackgroundColor White
+    HeaderBackgroundColor #B8D9F5
+    BorderColor #444444
+    FontColor Black
+    AttributeFontColor Black
+    StereotypeFontColor #555555
+    FontSize 10
+    AttributeFontSize 9
+    StereotypeFontSize 8
+}
+
+skinparam package {
+    BackgroundColor #FFFFCC
+    BorderColor #BBBB00
+    BorderThickness 1.5
+    FontColor #333300
+    FontSize 11
+    FontStyle bold
+}
+
+hide empty methods
+hide circle
+
+class "Application Mobile/Web" as AppClient <<external>>
+class "Passerelle IoT"         as GwFirmware <<external>>
+class "Nœud IoT"               as IoTNode <<external>>
+class "MongoDB Atlas"          as Db <<external>>
+class "Broker MQTT"            as Broker <<external>>
+
+class "Écosystème API EauSûre" as ApiEcosystem <<system>> {
+    + Authentification utilisateur
+    + Gestion du profil utilisateur
+    + Ingestion télémétrie et orchestration IoT
+}
+
+AppClient    -right- GwFirmware   : "         "
+IoTNode      -right- GwFirmware   : " LoRa + Appairage "
+AppClient    -down-  ApiEcosystem : " HTTPS / JWT "
+GwFirmware   -down-  ApiEcosystem : " HTTPS (clé API) "
+ApiEcosystem -down-  Db           : " Mongoose "
+ApiEcosystem -right- Broker       : " MQTT "
+
+package "Application_Auth_API (Node.js / Express)" {
+    class "Auth API" as AuthApi <<service>> {
+        + Connexion / Inscription locale
+        + OAuth Google & GitHub
+        + Émission et vérification JWT
+        + Consultation du profil connecté
+    }
+    class "Utilisateur" as AuthUser <<model>> {
+        + email / mot de passe
+        + identifiants OAuth (Google, GitHub)
+        + nom / avatar / fournisseur auth
+    }
+    AuthApi --> AuthUser
+}
+
+package "Application_Profile_API (Node.js / Express)" {
+    class "Profile API" as ProfileApi <<service>> {
+        + Consultation du profil
+        + Mise à jour du profil
+        + Contrôle d'accès JWT
+    }
+    class "Profil Utilisateur" as ProfileModel <<model>> {
+        + bio / organisation / rôle / téléphone
+        + préférences de notification
+        + unités / fuseau horaire / langue
+    }
+    ProfileApi --> ProfileModel
+}
+
+package "Hardware_API (TypeScript / Express)" {
+    class "API Core" as HwApi <<service>> {
+        + Réception données capteurs
+        + Gestion passerelles et nœuds
+        + Registre et appairage
+        + Santé / sécurité / limitation débit
+    }
+    class "Registre & Appairage" as HwRegistry <<service>> {
+        + Pré-enregistrement passerelle / nœud
+        + Provisionnement passerelle
+        + Vérification preuve / appairage nœud
+        + Heartbeat passerelle
+    }
+    class "Service Commandes" as HwCmd <<service>> {
+        + Persistance de la commande
+        + Publication MQTT de la commande
+        + Accusé de réception
+    }
+    class "Service MQTT" as HwMqtt <<service>> {
+        + Diffusion télémétrie temps réel
+        + Envoi commandes vers passerelle
+    }
+    class "Service Appairage" as HwPairing <<service>> {
+        + Jeton de session d'appairage
+        + Génération clé AES
+        + Vérification preuve nœud
+        + Dérivation mot de passe AP
+    }
+    class "Modèles de données" as HwModels <<model>> {
+        Passerelle / Nœud IoT
+        Données capteurs / Commande
+        Session d'appairage / Utilisateur
+    }
+
+    HwRegistry -[hidden]right- HwCmd
+    HwMqtt     -[hidden]right- HwPairing
+    HwRegistry -[hidden]down-  HwMqtt
+
+    HwApi --> HwRegistry
+    HwApi --> HwCmd
+    HwApi --> HwMqtt
+    HwApi --> HwPairing
+    HwApi --> HwModels
+}
+
+ApiEcosystem *-down-> AuthApi
+ApiEcosystem *-down-> ProfileApi
+ApiEcosystem *-down-> HwApi
+
+AuthApi    -[hidden]right- ProfileApi
+ProfileApi -[hidden]right- HwApi
+
+AuthApi    --> Db
+ProfileApi --> Db
+HwApi      --> Db
+HwMqtt     --> Broker
+
+AppClient  --> AuthApi
+AppClient  --> ProfileApi
+AppClient  --> HwApi
+GwFirmware --> HwApi
+
+@enduml

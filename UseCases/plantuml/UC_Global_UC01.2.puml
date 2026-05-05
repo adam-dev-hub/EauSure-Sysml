@@ -1,0 +1,61 @@
+@startuml EauSure_UC01_User_Part2
+
+top to bottom direction
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam actorStyle awesome
+skinparam usecaseBorderColor #2C7BB6
+skinparam usecaseBackgroundColor #EAF4FB
+skinparam usecaseBorderThickness 1.5
+skinparam ArrowColor #444444
+skinparam ArrowFontSize 10
+skinparam actorBackgroundColor #FFF8E7
+skinparam actorBorderColor #E69500
+skinparam shadowing false
+
+actor "Utilisateur" as User
+
+rectangle "[uc_01.2] Système EauSûre -Vue utilisateur (suite)" {
+
+  usecase "Configurer le système"                    as UC_ConfigSystem
+  usecase "Définir les seuils\nde qualité d'eau"     as UC_SetThresholds
+  usecase "Activer/désactiver\nles alertes locales"  as UC_LocalAlerts
+  usecase "Régler la fréquence\nde suivi d'état"     as UC_HealthFreq
+  usecase "Régler la fréquence\nde télémétrie"       as UC_TelemetryFreq
+  usecase "Activer/désactiver\nl'anti-chute"         as UC_AntiFall
+
+  usecase "Gérer les mises à jour"                   as UC_UserUpdateMgmt
+  usecase "Rechercher les mises\nà jour disponibles" as UC_CheckUpdates
+  usecase "Lancer le processus\nde mise à jour"      as UC_StartUpdate
+
+  usecase "Demander de\nl'assistance technique"       as UC_TechSupport
+  usecase "Réclamer un bug ou\nun problème technique" as UC_ReportIssue
+  usecase "Communiquer avec\nun administrateur"       as UC_ContactAdmin
+}
+
+User --> UC_ConfigSystem
+User --> UC_UserUpdateMgmt
+User --> UC_TechSupport
+
+' Configuration
+UC_ConfigSystem <.. UC_SetThresholds : <<extend>>
+UC_ConfigSystem <.. UC_LocalAlerts   : <<extend>>
+UC_ConfigSystem <.. UC_HealthFreq    : <<extend>>
+UC_ConfigSystem <.. UC_TelemetryFreq : <<extend>>
+UC_ConfigSystem <.. UC_AntiFall      : <<extend>>
+
+' Mises à jour
+UC_UserUpdateMgmt <.. UC_CheckUpdates : <<extend>>
+UC_UserUpdateMgmt <.. UC_StartUpdate  : <<extend>>
+UC_CheckUpdates <.. UC_StartUpdate    : <<include>>
+
+' Assistance
+UC_TechSupport <.. UC_ReportIssue  : <<extend>>
+UC_TechSupport <.. UC_ContactAdmin : <<extend>>
+
+' Espacement vertical
+UC_ConfigSystem -[hidden]down-> UC_UserUpdateMgmt
+UC_UserUpdateMgmt -[hidden]down-> UC_TechSupport
+
+@enduml

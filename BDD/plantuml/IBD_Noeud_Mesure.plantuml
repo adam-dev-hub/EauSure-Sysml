@@ -1,0 +1,85 @@
+@startuml IBD_Systeme_Complet_Couleur
+!pragma layout elk
+left to right direction
+
+skinparam linetype ortho
+skinparam nodesep 30
+skinparam ranksep 40
+
+rectangle "Passerelle IoT" as EXTGW <<external>> #F5F5F5
+rectangle "API Pairing (Cloud)" as EXTAPI <<external>> #F5F5F5
+
+frame "ibd [Système] Nœud de Mesure (Node)" {
+
+    ' --- BLOCS LOGICIELS ---
+    package "Modules Logiciels (FreeRTOS)" #FFFFCC {
+        rectangle "Appairage & FUOTA"     as sPair
+        rectangle "Pile de Communication" as sCom
+        rectangle "Contrôleur Acquisition" as sAcq
+        rectangle "Contrôleur Affichage"  as sDisp
+        rectangle "État Partagé"          as sState #B8D9F5
+    }
+
+    ' --- BLOCS MATÉRIELS ---
+    package "Composants Matériels" #E8F5E9 {
+        rectangle "Microcontrôleur"  as hMCU
+        rectangle "Module Radio"     as hRad
+        rectangle "Interface Wi-Fi (STA/AP)" as hWifi
+        rectangle "Grappe Capteurs"  as hSen
+        rectangle "Stockage NVS"     as hMem
+        rectangle "Écran & LED RGB"    as hUI
+        rectangle "Énergie & Alim"   as hPow
+    }
+
+    ' ========================================================
+    ' BUS NUMÉRIQUES & SIGNAUX (VERT)
+    ' ========================================================
+    hMCU <--> hRad  #008000;text:008000 : " SPI / IRQ "
+    hMCU <--> hSen  #008000;text:008000 : " GPIO(ADC) / 1-Wire / I2C (MPU6050) "
+    hMCU <--> hWifi #008000;text:008000 : " Wi-Fi 802.11 (STA/AP) "
+    hMCU <--> hUI   #008000;text:008000 : " I2C / GPIO "
+    hMCU <--> hPow  #008000;text:008000 : " I2C (INA219) "
+
+    ' ========================================================
+    ' ACCÈS MÉMOIRE PHYSIQUE (VIOLET)
+    ' ========================================================
+    hMCU <..> hMem  #800080;text:800080 : " Flash Map "
+
+    ' ========================================================
+    ' FLUX LOGICIELS INTERNES / IPC (ORANGE)
+    ' ========================================================
+    sPair  <--> sState  #FF8C00;text:FF8C00 : " Config / Keys "
+    sCom   <--> sState  #FF8C00;text:FF8C00 : " Buffers TX/RX "
+    sAcq   <--> sState  #FF8C00;text:FF8C00 : " Data Sensors "
+    sDisp  <--> sState  #FF8C00;text:FF8C00 : " UI State "
+    sPair  -->  sCom    #FF8C00;text:FF8C00 : " Cmd Appairage "
+
+    ' ========================================================
+    ' DRIVERS LOGICIEL -> MATÉRIEL (MARRON)
+    ' ========================================================
+    sCom  ..>  hRad  #A52A2A;text:A52A2A : " Driver LoRa/SPI "
+    sAcq  ..>  hSen  #A52A2A;text:A52A2A : " Drivers ADC/I2C/1-Wire "
+    sDisp ..>  hUI   #A52A2A;text:A52A2A : " Driver OLED/RGB "
+    sPair ..>  hMem  #A52A2A;text:A52A2A : " Write FUOTA "
+    sPair ..>  hWifi #A52A2A;text:A52A2A : " Provisioning HTTP(S) "
+}
+
+' ========================================================
+' FLUX EXTERNES (BLEU) — hors frontière système
+' ========================================================
+EXTGW <--> hRad  #0000FF;text:0000FF : " LoRa RF "
+EXTGW <--> hWifi #0000FF;text:0000FF : " Wi-Fi AP + HTTP (/identity,/prove,/provision) "
+hWifi <--> EXTAPI #0000FF;text:0000FF : " HTTPS /api/registry/pair-node "
+
+
+
+legend right
+  |= Couleur|= Type de Flux            |
+  |<#0000FF>| Externe (LoRa/Wi-Fi/HTTPS) |
+  |<#008000>| Bus Numérique (SPI/I2C)  |
+  |<#800080>| Physique (Flash/NVS)     |
+  |<#FF8C00>| Logiciel (IPC/FreeRTOS)  |
+  |<#A52A2A>| Drivers / Bas niveau     |
+endlegend
+
+@enduml

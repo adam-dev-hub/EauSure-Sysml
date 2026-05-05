@@ -1,0 +1,130 @@
+@startuml BDD_Global_EauSure
+!pragma layout elk
+top to bottom direction
+
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam roundCorner 0
+skinparam nodesep 16
+skinparam ranksep 24
+skinparam padding 2
+
+skinparam class {
+    BackgroundColor White
+    HeaderBackgroundColor #B8D9F5
+    BorderColor #444444
+    FontColor Black
+    AttributeFontColor Black
+    StereotypeFontColor #555555
+    FontSize 9
+    AttributeFontSize 8
+    StereotypeFontSize 7
+}
+
+skinparam note {
+    BackgroundColor #FFFFF0
+    BorderColor #BBBB00
+    FontSize 8
+}
+
+hide empty methods
+hide circle
+
+title <b>BDD Global — Système EauSûre</b>\n<i>Vue d'ensemble · IoT & Systèmes Embarqués</i>
+
+' ============================================================
+' LIGNE HAUTE — NŒUD  +  APP CLIENT  (côte à côte)
+' ============================================================
+class "Nœud de Mesure" as Node <<block>> {
+    + ID : hex unique
+    + Mode : Normal | Appairage | FUOTA
+    -- Ports --
+    ○ LoRa RF       ↔ Passerelle
+    ○ Wi-Fi AP      ↔ Passerelle (appairage)
+    ○ HTTPS         → API (pair-node)
+}
+
+class "App Web / Mobile" as AppClient <<external>> {
+    + HTTPS / JWT
+    + BLE  ·  MQTT
+}
+
+Node -[hidden]right- AppClient
+
+' ============================================================
+' LIGNE MÉDIANE — PASSERELLE IoT
+' (détail : BDD_Passerelle · IBD_Passerelle)
+' ============================================================
+class "Passerelle IoT" as Gateway <<block>> {
+    + HW-ID : MAC Wi-Fi
+    + Mode : Provisioning | Appairage | Normal
+    -- Ports --
+    ○ LoRa RF       ↔ Nœuds [1..*]
+    ○ BLE GATT      ↔ App (provisioning)
+    ○ HTTPS/API-Key → Hardware API
+    ○ MQTT/TLS      ↔ Broker
+}
+
+' ============================================================
+' LIGNE BASSE — ÉCOSYSTÈME API
+' (détail : BDD_API_Global · IBD_API_Global)
+' ============================================================
+class "Écosystème API EauSûre" as ApiEco <<block>> {
+    -- Services --
+    ○ Auth API     (JWT · OAuth Google/GitHub)
+    ○ Profile API  (Bearer JWT)
+    ○ HW API       (Clé API · MQTT · Appairage)
+    -- Infra --
+    ○ MongoDB Atlas  (Mongoose)
+    ○ Broker MQTT    (télémétrie · commandes)
+}
+
+' ============================================================
+' INFRASTRUCTURE CLOUD
+' ============================================================
+class "MongoDB Atlas" as Db <<external>>
+class "Broker MQTT"   as Broker <<external>>
+
+Db -[hidden]right- Broker
+
+' ============================================================
+' GUIDE DE MISE EN PAGE (liens cachés)
+' ============================================================
+Node     -[hidden]down- Gateway
+Gateway  -[hidden]down- ApiEco
+ApiEco   -[hidden]down- Db
+
+' ============================================================
+' FLUX INTER-SYSTÈMES IoT
+' ============================================================
+Node    <-->  Gateway : " LoRa RF "
+Node    <-->  Gateway : " Wi-Fi AP + HTTP\n(/identity·/prove·/provision) "
+Node     -->  ApiEco  : " HTTPS\n(/api/registry/pair-node) "
+
+Gateway  -->  ApiEco  : " HTTPS / Clé API\n(/api/sensor-data · /api/registry/*) "
+Gateway <-->  Broker  : " MQTT/TLS "
+
+' ============================================================
+' FLUX APPLICATIFS
+' ============================================================
+AppClient <-->  Gateway  : " BLE "
+AppClient  -->  ApiEco   : " HTTPS / JWT "
+AppClient <-->  Broker   : " MQTT "
+
+' ============================================================
+' PERSISTANCE
+' ============================================================
+ApiEco  -->  Db     : " Mongoose "
+ApiEco  -->  Broker : " MQTT "
+
+' ============================================================
+' NOTE ARCHITECTURALE
+' ============================================================
+note as NoteJWT
+  <b>JWT_SECRET</b> partagé
+  par variable d'environnement
+  — aucun appel inter-services
+end note
+NoteJWT .. ApiEco
+
+@enduml

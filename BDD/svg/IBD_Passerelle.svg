@@ -1,0 +1,2192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?plantuml 1.2026.2?><svg
+   contentStyleType="text/css"
+   data-diagram-type="DESCRIPTION"
+   height="1763.96"
+   preserveAspectRatio="none"
+   version="1.1"
+   viewBox="0 0 1178.6857 1763.96"
+   width="1178.6857"
+   zoomAndPan="magnify"
+   id="svg178"
+   sodipodi:docname="IBD_Passerelle.svg"
+   inkscape:export-filename="IBD_Passerelle.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4.4rc (12926ee9f3, 2026-04-30)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview178"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.28383"
+     inkscape:cx="174.40017"
+     inkscape:cy="773.35026"
+     inkscape:window-width="1536"
+     inkscape:window-height="795"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg178" />
+  <defs
+     id="defs1" />
+  <rect
+     fill="none"
+     height="1406.328"
+     style="stroke:#000000;stroke-width:1;fill:#ffffcc;fill-opacity:1"
+     width="1074.0916"
+     x="104.0941"
+     y="231.436"
+     id="rect1" />
+  <path
+     d="m 386.8651,231.436 v 16.0679 l -10,10 h -272.771"
+     fill="none"
+     style="stroke:#000000;stroke-width:1"
+     id="path1" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="14px"
+     font-weight="bold"
+     lengthAdjust="spacing"
+     textLength="268.771"
+     x="159.83611"
+     y="261.15189"
+     id="text1"
+     transform="translate(-50.742001,-11.75)">IBD [Système] Passerelle IoT (Gateway)</text>
+  <polygon
+     fill="none"
+     points="1156.1086,966.056 180.8361,966.056 180.8361,283.186 288.0644,283.186 295.0644,308.1679 1156.1086,308.1679 "
+     style="stroke:#000000;stroke-width:1.5;fill:#ffffff;fill-opacity:1"
+     id="polygon1"
+     transform="translate(-50.742001,-11.75)" />
+  <line
+     style="stroke:#000000;stroke-width:1.5"
+     x1="130.0941"
+     x2="244.32239"
+     y1="296.41791"
+     y2="296.41791"
+     id="line1" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="11px"
+     font-weight="bold"
+     lengthAdjust="spacing"
+     textLength="97.228302"
+     x="186.83611"
+     y="298.94489"
+     id="text2"
+     transform="translate(-50.742001,-11.75)">Modules Logiciels</text>
+  <polygon
+     fill="none"
+     points="1213.9277,1629.514 535.3075,1629.514 535.3075,1111.762 668.0996,1111.762 675.0996,1136.7439 1213.9277,1136.7439 "
+     style="stroke:#000000;stroke-width:1.5;fill:#ffffff;fill-opacity:1"
+     id="polygon2"
+     transform="translate(-50.742001,-11.75)" />
+  <line
+     style="stroke:#000000;stroke-width:1.5"
+     x1="484.56549"
+     x2="624.3576"
+     y1="1124.9939"
+     y2="1124.9939"
+     id="line2" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="11px"
+     font-weight="bold"
+     lengthAdjust="spacing"
+     textLength="122.7921"
+     x="541.3075"
+     y="1127.5209"
+     id="text3"
+     transform="translate(-50.742001,-11.75)">Composants Matériels</text>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Modules Logiciels.sModes"
+     data-source-line="37"
+     id="ent0010"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="138.94991"
+       x="367.02231"
+       y="323.186"
+       id="rect3" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="114.9499"
+       x="379.02231"
+       y="345.87601"
+       id="text4">Orchestrateur de Modes</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Modules Logiciels.sProv"
+     data-source-line="38"
+     id="ent0011"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="102.2999"
+       x="579.6684"
+       y="436.51199"
+       id="rect4" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="78.299896"
+       x="591.6684"
+       y="459.202"
+       id="text5">Provisioning BLE</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Modules Logiciels.sPair"
+     data-source-line="39"
+     id="ent0012"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="104.3999"
+       x="405.81229"
+       y="549.83801"
+       id="rect5" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="80.399902"
+       x="417.81229"
+       y="572.52802"
+       id="text6">Appairage Nœud</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Modules Logiciels.sLoRa"
+     data-source-line="40"
+     id="ent0013"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="172.0499"
+       x="337.46231"
+       y="673.164"
+       id="rect6" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="148.0499"
+       x="349.46231"
+       y="695.854"
+       id="text7">Communication LoRa Sécurisée</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Modules Logiciels.sAct"
+     data-source-line="41"
+     id="ent0014"
+     transform="translate(-142.742,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="51.240002"
+       style="stroke:#444444;stroke-width:0.5"
+       width="150.0199"
+       x="331.27231"
+       y="899.81598"
+       id="rect7" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="126.0199"
+       x="343.27231"
+       y="922.50598"
+       id="text8">Activation LoRa Sécurisée /</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="46.790001"
+       x="343.27231"
+       y="936.12598"
+       id="text9">Scheduler</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Modules Logiciels.sTel"
+     data-source-line="42"
+     id="ent0015"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="119.6699"
+       x="675.63037"
+       y="786.48999"
+       id="rect9" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="95.669899"
+       x="687.63037"
+       y="809.17999"
+       id="text10">Télémétrie &amp; Alertes</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Modules Logiciels.sCloud"
+     data-source-line="43"
+     id="ent0016"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="112.1499"
+       x="713.0354"
+       y="673.164"
+       id="rect10" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="88.149902"
+       x="725.0354"
+       y="695.854"
+       id="text11">Connectivité Cloud</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Modules Logiciels.sStore"
+     data-source-line="44"
+     id="ent0017"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#b8d9f5"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="110.3399"
+       x="885.16541"
+       y="902.53998"
+       id="rect11" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="86.339897"
+       x="897.16541"
+       y="925.22998"
+       id="text12">Stockage Locale</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Composants Mat.riels.hMCU"
+     data-source-line="59"
+     id="ent0028"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="77.839996"
+       x="877.74292"
+       y="1151.762"
+       id="rect12" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="53.84"
+       x="889.74292"
+       y="1174.452"
+       id="text13">MCU ESP32</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Composants Mat.riels.hLoRa"
+     data-source-line="60"
+     id="ent0029"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="121.7899"
+       x="989.13782"
+       y="1277.812"
+       id="rect13" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="97.789902"
+       x="1001.1378"
+       y="1300.502"
+       id="text14">Module LoRa SX127x</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Composants Mat.riels.hWifi"
+     data-source-line="61"
+     id="ent0030"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="51.240002"
+       style="stroke:#444444;stroke-width:0.5"
+       width="135.13989"
+       x="826.29541"
+       y="1462.0341"
+       id="rect14" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="111.1399"
+       x="838.29541"
+       y="1484.724"
+       id="text15">Sous-système Wi-Fi/BLE</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="71.069901"
+       x="838.29541"
+       y="1498.344"
+       id="text16">(intégré ESP32)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Composants Mat.riels.hNvs"
+     data-source-line="62"
+     id="ent0031"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="51.240002"
+       style="stroke:#444444;stroke-width:0.5"
+       width="120.2999"
+       x="605.06061"
+       y="1563.274"
+       id="rect16" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="19.09"
+       x="617.06061"
+       y="1585.964"
+       id="text17">NVS</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="96.299896"
+       x="617.06061"
+       y="1599.584"
+       id="text18">(flash interne ESP32)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Composants Mat.riels.hSD"
+     data-source-line="63"
+     id="ent0032"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="51.240002"
+       style="stroke:#444444;stroke-width:0.5"
+       width="104.9499"
+       x="864.18793"
+       y="1275.088"
+       id="rect18" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="39.700001"
+       x="876.18793"
+       y="1297.778"
+       id="text19">microSD</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="80.949898"
+       x="876.18793"
+       y="1311.3979"
+       id="text20">(SPI dédié / HSPI)</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ibd .Syst.me. Passerelle IoT .Gateway..Composants Mat.riels.hAudio"
+     data-source-line="64"
+     id="ent0033"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f1f1f1"
+       height="37.619999"
+       style="stroke:#444444;stroke-width:0.5"
+       width="160.1599"
+       x="646.1355"
+       y="1465.439"
+       id="rect20" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="136.1599"
+       x="658.1355"
+       y="1488.129"
+       id="text21">Audio I2S + MAX98357A + HP</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="EXTNODE"
+     data-source-line="23"
+     id="ent0002"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f5f5f5"
+       height="55.240002"
+       style="stroke:#444444;stroke-width:0.5"
+       width="105.8299"
+       x="50.992001"
+       y="12"
+       id="rect21" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="45.699902"
+       x="81.056999"
+       y="34.689999"
+       id="text22">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="81.829903"
+       x="62.992001"
+       y="52.310001"
+       id="text23">Nœud de Mesure</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="EXTAPP"
+     data-source-line="24"
+     id="ent0003"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f5f5f5"
+       height="55.240002"
+       style="stroke:#444444;stroke-width:0.5"
+       width="136.1599"
+       x="98.449501"
+       y="117.24"
+       id="rect23" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="45.699902"
+       x="143.6795"
+       y="139.92999"
+       id="text24">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="112.1599"
+       x="110.4495"
+       y="157.55"
+       id="text25">Application Mobile/Web</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="EXTAPI"
+     data-source-line="25"
+     id="ent0004"
+     transform="translate(-50.742001,-11.75)">
+    <rect
+       fill="#f5f5f5"
+       height="55.240002"
+       style="stroke:#444444;stroke-width:0.5"
+       width="111.0999"
+       x="971.5152"
+       y="1720.22"
+       id="rect25" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="45.699902"
+       x="1004.2152"
+       y="1742.91"
+       id="text26">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="87.099899"
+       x="983.5152"
+       y="1760.5299"
+       id="text27">API Cloud EauSûre</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="EXTMQTT"
+     data-source-line="26"
+     id="ent0005"
+     transform="translate(-57.593086,-107.33259)">
+    <rect
+       fill="#f5f5f5"
+       height="55.240002"
+       style="stroke:#444444;stroke-width:0.5"
+       width="86.3899"
+       x="828.14709"
+       y="1815.46"
+       id="rect27" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="45.699902"
+       x="848.49213"
+       y="1838.15"
+       id="text28">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="10px"
+       lengthAdjust="spacing"
+       textLength="62.3899"
+       x="840.14709"
+       y="1855.7699"
+       id="text29">Broker MQTT</text>
+  </g>
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="885.38092"
+     x2="885.38092"
+     y1="1177.632"
+     y2="1197.632"
+     id="line29" />
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="885.38092"
+     x2="962.75378"
+     y1="1197.632"
+     y2="1197.632"
+     id="line30" />
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="962.75378"
+     x2="962.75378"
+     y1="1197.632"
+     y2="1266.062"
+     id="line31" />
+  <polygon
+     fill="#008000"
+     points="1013.4958,1277.812 1017.4958,1268.812 1013.4958,1272.812 1009.4958,1268.812 "
+     style="stroke:#008000;stroke-width:1"
+     id="polygon31"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#008000"
+     points="936.1229,1189.382 932.1229,1198.382 936.1229,1194.382 940.1229,1198.382 "
+     style="stroke:#008000;stroke-width:1"
+     id="polygon32"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="53.651001"
+     x="950.46478"
+     y="1247.2791"
+     id="text32"
+     transform="translate(-43.268089,-55.659232)">SPI / IRQ</text>
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="875.65088"
+     x2="875.65088"
+     y1="1177.632"
+     y2="1187.632"
+     id="line32" />
+  <line
+     style="stroke:#008000;stroke-width:0.970656"
+     x1="875.64844"
+     x2="875.64844"
+     y1="1187.593"
+     y2="1249.4995"
+     id="line34" />
+  <line
+     style="stroke:#008000;stroke-width:0.978407"
+     x1="876.18396"
+     x2="792.44592"
+     y1="1249.338"
+     y2="1249.338"
+     id="line35" />
+  <line
+     style="stroke:#008000;stroke-width:1.01107"
+     x1="792.44592"
+     x2="792.44592"
+     y1="1248.9518"
+     y2="1450.2841"
+     id="line36" />
+  <polygon
+     fill="#008000"
+     points="843.1879,1462.034 847.1879,1453.034 843.1879,1457.034 839.1879,1453.034 "
+     style="stroke:#008000;stroke-width:1"
+     id="polygon36"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#008000"
+     points="926.3929,1189.382 922.3929,1198.382 926.3929,1194.382 930.3929,1198.382 "
+     style="stroke:#008000;stroke-width:1"
+     id="polygon37"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="107.8611"
+     x="725.94678"
+     y="1305.752"
+     id="text37"
+     transform="rotate(-90,788.01699,1307.3894)">Wi-Fi 802.11 / BLE</text>
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="856.19092"
+     x2="856.19092"
+     y1="1177.632"
+     y2="1207.632"
+     id="line37" />
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="856.20172"
+     x2="856.20172"
+     y1="1207.4829"
+     y2="1263.189"
+     id="line39" />
+  <polygon
+     fill="#008000"
+     points="890.4254,1275.088 894.4254,1266.088 890.4254,1270.088 886.4254,1266.088 "
+     style="stroke:#008000;stroke-width:1"
+     id="polygon39"
+     transform="translate(-34.197029,-11.75)" />
+  <polygon
+     fill="#008000"
+     points="906.9329,1189.382 902.9329,1198.382 906.9329,1194.382 910.9329,1198.382 "
+     style="stroke:#008000;stroke-width:1"
+     id="polygon40"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="59.6311"
+     x="821.41431"
+     y="1247.2791"
+     id="text40"
+     transform="matrix(0,-0.69749907,0.63378555,0,61.484579,1817.4292)">SPI (HSPI)</text>
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="846.46088"
+     x2="846.46088"
+     y1="1177.632"
+     y2="1197.632"
+     id="line40" />
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="846.46088"
+     x2="635.43347"
+     y1="1197.632"
+     y2="1197.632"
+     id="line41" />
+  <line
+     style="stroke:#008000;stroke-width:1"
+     x1="635.43347"
+     x2="635.43347"
+     y1="1197.632"
+     y2="1453.689"
+     id="line42" />
+  <polygon
+     fill="#008000"
+     points="686.1755,1465.439 690.1755,1456.439 686.1755,1460.439 682.1755,1456.439 "
+     style="stroke:#008000;stroke-width:1"
+     id="polygon42"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#008000"
+     points="897.2029,1189.382 893.2029,1198.382 897.2029,1194.382 901.2029,1198.382 "
+     style="stroke:#008000;stroke-width:1"
+     id="polygon43"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="18.98"
+     x="657.81549"
+     y="1305.752"
+     id="text43"
+     transform="rotate(-90,650.89435,1326.4982)">I2S</text>
+  <line
+     style="stroke:#800080;stroke-width:1.38938;stroke-dasharray:9.72561, 9.72561"
+     x1="836.7309"
+     x2="836.7309"
+     y1="1177.632"
+     y2="1196.9355"
+     id="line43" />
+  <line
+     style="stroke:#800080;stroke-width:1.00098;stroke-dasharray:7.00687, 7.00687"
+     x1="836.7309"
+     x2="583.89801"
+     y1="1191.632"
+     y2="1191.632"
+     id="line44" />
+  <line
+     style="stroke:#800080;stroke-width:0.993669;stroke-dasharray:6.95568, 6.95568"
+     x1="584.39349"
+     x2="584.39349"
+     y1="1192.2253"
+     y2="1551.524"
+     id="line45" />
+  <polygon
+     fill="#800080"
+     points="635.1355,1563.274 639.1355,1554.274 635.1355,1558.274 631.1355,1554.274 "
+     style="stroke:#800080;stroke-width:1"
+     id="polygon45"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#800080"
+     points="887.4729,1189.382 883.4729,1198.382 887.4729,1194.382 891.4729,1198.382 "
+     style="stroke:#800080;stroke-width:1"
+     id="polygon46"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="68.0681"
+     x="557.6875"
+     y="1364.225"
+     id="text46"
+     transform="rotate(-90,582.50932,1370.9778)">Flash / NVS</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="399.6503"
+     x2="399.6503"
+     y1="349.056"
+     y2="369.056"
+     id="line46" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="399.6503"
+     x2="563.02631"
+     y1="369.056"
+     y2="369.056"
+     id="line47" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="563.02631"
+     x2="563.02631"
+     y1="369.056"
+     y2="424.76199"
+     id="line48" />
+  <polygon
+     fill="#ff8c00"
+     points="613.7683,436.512 617.7683,427.512 613.7683,431.512 609.7683,427.512 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon48"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="450.3923,360.806 446.3923,369.806 450.3923,365.806 454.3923,369.806 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon49"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="114.2831"
+     x="490.10519"
+     y="408.703"
+     id="text49"
+     transform="translate(-50.742001,-23.75)">Mode Provisioning</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="371.86029"
+     x2="371.86029"
+     y1="349.056"
+     y2="359.056"
+     id="line49" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="371.8703"
+     x2="371.8703"
+     y1="359.056"
+     y2="538.08801"
+     id="line51" />
+  <polygon
+     fill="#ff8c00"
+     points="444.6123,540.838 440.6123,544.838 436.6123,540.838 440.6123,549.838 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon51"
+     transform="translate(-68.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="422.6023,360.806 418.6023,369.806 422.6023,365.806 426.6023,369.806 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon52"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="101.2961"
+     x="450.99231"
+     y="460.366"
+     id="text52"
+     transform="rotate(90,447.52788,392.73174)">Mode Appairage</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="344.07028"
+     x2="344.07028"
+     y1="349.056"
+     y2="661.414"
+     id="line52" />
+  <polygon
+     fill="#ff8c00"
+     points="394.8123,673.164 398.8123,664.164 394.8123,668.164 390.8123,664.164 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon53"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="394.8123,360.806 390.8123,369.806 394.8123,365.806 398.8123,369.806 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon54"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="84.279099"
+     x="301.1532"
+     y="522.02899"
+     id="text54"
+     transform="rotate(-90,304.67123,488.29808)">Mode Normal</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="321.13031"
+     x2="321.13031"
+     y1="699.034"
+     y2="868.06598"
+     id="line54" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="321.0444"
+     x2="321.0444"
+     y1="867.95587"
+     y2="887.95587"
+     id="line56" />
+  <polygon
+     fill="#ff8c00"
+     points="372.7773,890.816 368.7773,894.816 364.7773,890.816 368.7773,899.816 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon56"
+     transform="translate(-47.732911,-11.639899)" />
+  <polygon
+     fill="#ff8c00"
+     points="371.8723,710.784 367.8723,719.784 371.8723,715.784 375.8723,719.784 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon57"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="159.2762"
+     x="203.21609"
+     y="810.34399"
+     id="text57"
+     transform="matrix(0,-0.80428382,0.80428382,0,-335.57138,1010.02)">ACTIVATE / MEASURE / HB</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="424.3602"
+     x2="424.3602"
+     y1="699.034"
+     y2="709.034"
+     id="line57" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1.0016"
+     x1="423.87363"
+     x2="576.09027"
+     y1="757.47852"
+     y2="757.47852"
+     id="line58" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="575.77887"
+     x2="654.49451"
+     y1="757.44067"
+     y2="757.44067"
+     id="line60" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1.3343"
+     x1="654.80591"
+     x2="654.80591"
+     y1="756.93622"
+     y2="774.73999"
+     id="line61" />
+  <polygon
+     fill="#ff8c00"
+     points="705.5479,786.49 709.5479,777.49 705.5479,781.49 701.5479,777.49 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon61"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="475.1022,710.784 471.1022,719.784 475.1022,715.784 479.1022,719.784 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon62"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="79.560097"
+     x="537.89221"
+     y="758.68103"
+     id="text62"
+     transform="translate(-34.833358,-8.0756412)">DATA frames</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1.10363"
+     x1="417.7103"
+     x2="417.7103"
+     y1="575.70801"
+     y2="600.06781"
+     id="line62" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="417.7103"
+     x2="718.36829"
+     y1="599.70801"
+     y2="599.70801"
+     id="line63" />
+  <line
+     style="stroke:#ff8c00;stroke-width:0.972975"
+     x1="718.36829"
+     x2="718.36829"
+     y1="599.21143"
+     y2="661.414"
+     id="line64" />
+  <polygon
+     fill="#ff8c00"
+     points="769.1103,673.164 773.1103,664.164 769.1103,668.164 765.1103,664.164 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon64"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="468.4523,587.458 464.4523,596.458 468.4523,592.458 472.4523,596.458 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon65"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="131.5731"
+     x="628.15723"
+     y="645.35498"
+     id="text65"
+     transform="translate(-50.742001,-31.75)">verifyProof / fetchKey</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="684.72339"
+     x2="684.72339"
+     y1="774.73999"
+     y2="699.034"
+     id="line65" />
+  <polygon
+     fill="#ff8c00"
+     points="735.4654,710.784 739.4654,701.784 735.4654,705.784 731.4654,701.784 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon66"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="735.4654,786.49 731.4654,795.49 735.4654,791.49 739.4654,795.49 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon67"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="80.8731"
+     x="645.21228"
+     y="758.68103"
+     id="text67"
+     transform="matrix(0,-0.79440744,0.79440744,0,77.593659,1280.2232)">Upload cloud</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="580.07629"
+     x2="580.07629"
+     y1="462.38199"
+     y2="482.38199"
+     id="line67" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="580.07629"
+     x2="1078.3667"
+     y1="482.38199"
+     y2="482.38199"
+     id="line68" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="1078.3667"
+     x2="1078.3667"
+     y1="482.38199"
+     y2="878.06598"
+     id="line69" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="1078.3667"
+     x2="922.69537"
+     y1="878.06598"
+     y2="878.06598"
+     id="line70" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="922.69537"
+     x2="922.69537"
+     y1="878.06598"
+     y2="890.78998"
+     id="line71" />
+  <polygon
+     fill="#ff8c00"
+     points="973.4374,902.54 977.4374,893.54 973.4374,897.54 969.4374,893.54 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon71"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="630.8183,474.132 626.8183,483.132 630.8183,479.132 634.8183,483.132 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon72"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="66.274101"
+     x="1053.4545"
+     y="697.01801"
+     id="text72"
+     transform="translate(-50.742001,-11.75)">Wi-Fi creds</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1.28651"
+     x1="438.59021"
+     x2="438.59021"
+     y1="575.70801"
+     y2="592.25903"
+     id="line72" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="438.59021"
+     x2="984.33246"
+     y1="591.70801"
+     y2="591.70801"
+     id="line73" />
+  <line
+     style="stroke:#ff8c00;stroke-width:0.990154"
+     x1="984.33246"
+     x2="984.33246"
+     y1="591.2406"
+     y2="868.06598"
+     id="line74" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="984.33246"
+     x2="900.62738"
+     y1="868.06598"
+     y2="868.06598"
+     id="line75" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="900.62738"
+     x2="900.62738"
+     y1="868.06598"
+     y2="890.78998"
+     id="line76" />
+  <polygon
+     fill="#ff8c00"
+     points="951.3694,902.54 955.3694,893.54 951.3694,897.54 947.3694,893.54 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon76"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="489.3322,587.458 485.3322,596.458 489.3322,592.458 493.3322,596.458 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon77"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="78.0131"
+     x="947.6814"
+     y="758.68103"
+     id="text77"
+     transform="translate(-50.742001,-11.75)">Pairing / clés</text>
+  <line
+     style="stroke:#ff8c00;stroke-width:1.42942"
+     x1="720.62427"
+     x2="720.62427"
+     y1="812.35999"
+     y2="832.7923"
+     id="line77" />
+  <line
+     style="stroke:#ff8c00;stroke-width:0.963555"
+     x1="720.62427"
+     x2="857.04449"
+     y1="832.35999"
+     y2="832.35999"
+     id="line78" />
+  <line
+     style="stroke:#ff8c00;stroke-width:0.900169"
+     x1="856.54926"
+     x2="856.54926"
+     y1="831.91119"
+     y2="868.94678"
+     id="line79" />
+  <line
+     style="stroke:#ff8c00;stroke-width:1"
+     x1="856.49139"
+     x2="856.49139"
+     y1="868.06598"
+     y2="890.78998"
+     id="line81" />
+  <polygon
+     fill="#ff8c00"
+     points="907.2334,902.54 911.2334,893.54 907.2334,897.54 903.2334,893.54 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon81"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#ff8c00"
+     points="771.3663,824.11 767.3663,833.11 771.3663,829.11 775.3663,833.11 "
+     style="stroke:#ff8c00;stroke-width:1"
+     id="polygon82"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="85.241096"
+     x="823.6803"
+     y="862.00708"
+     id="text82"
+     transform="translate(-56.347435,-37.285866)">WAV / logs SD</text>
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="389.95029"
+     x2="389.95029"
+     y1="699.034"
+     y2="719.034"
+     id="line82" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.992506;stroke-dasharray:6.94754, 6.94754"
+     x1="389.99969"
+     x2="389.99969"
+     y1="722.77094"
+     y2="969.30603"
+     id="line84" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="389.94717"
+     x2="389.94717"
+     y1="969.30603"
+     y2="1075.012"
+     id="line86" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.916346;stroke-dasharray:6.41442, 6.41442"
+     x1="389.88956"
+     x2="1035.8279"
+     y1="1075.012"
+     y2="1075.012"
+     id="line87" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1035.8279"
+     x2="1035.8279"
+     y1="1075.012"
+     y2="1266.062"
+     id="line88" />
+  <polygon
+     fill="#a52a2a"
+     points="1086.5698,1277.812 1090.5698,1268.812 1086.5698,1272.812 1082.5698,1268.812 "
+     style="stroke:#a52a2a;stroke-width:1"
+     id="polygon88"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="95.199097"
+     x="212.733"
+     y="1018.953"
+     id="text88"
+     transform="matrix(0,-0.94124793,1.1034547,0,-740.10192,1259.8875)">Driver LoRa/SPI</text>
+  <line
+     style="stroke:#a52a2a;stroke-width:1.03846;stroke-dasharray:7.26919, 7.26919"
+     x1="754.55829"
+     x2="754.55829"
+     y1="699.41498"
+     y2="969.30603"
+     id="line91" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.959814;stroke-dasharray:6.7187, 6.7187"
+     x1="754.46191"
+     x2="754.46191"
+     y1="971.1745"
+     y2="1031.7057"
+     id="line93" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1.15082;stroke-dasharray:8.05576, 8.05576"
+     x1="754.82336"
+     x2="1103.1858"
+     y1="1035.012"
+     y2="1035.012"
+     id="line94" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1103.1858"
+     x2="1103.1858"
+     y1="1035.012"
+     y2="1410.2841"
+     id="line95" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1103.1858"
+     x2="843.12341"
+     y1="1410.2841"
+     y2="1410.2841"
+     id="line96" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="843.12341"
+     x2="843.12341"
+     y1="1410.2841"
+     y2="1450.2841"
+     id="line97" />
+  <polygon
+     fill="#a52a2a"
+     points="893.8654,1462.034 897.8654,1453.034 893.8654,1457.034 889.8654,1453.034 "
+     style="stroke:#a52a2a;stroke-width:1"
+     id="polygon97"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="115.7001"
+     x="765.81238"
+     y="1018.953"
+     id="text97"
+     transform="matrix(0,-0.8596079,1,0,-247.89057,1603.1676)">Wi-Fi + TLS + MQTT</text>
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="605.65131"
+     x2="605.65131"
+     y1="462.38199"
+     y2="472.38199"
+     id="line98" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1.03667;stroke-dasharray:7.25667, 7.25667"
+     x1="605.65131"
+     x2="1125.4906"
+     y1="472.38199"
+     y2="472.38199"
+     id="line99" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.993315;stroke-dasharray:6.9532, 6.9532"
+     x1="1125.2384"
+     x2="1125.2384"
+     y1="476.91177"
+     y2="967.21411"
+     id="line100" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1125.1858"
+     x2="1125.1858"
+     y1="969.30603"
+     y2="1420.2841"
+     id="line102" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1125.1858"
+     x2="860.01587"
+     y1="1420.2841"
+     y2="1420.2841"
+     id="line103" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="860.01587"
+     x2="860.01587"
+     y1="1420.2841"
+     y2="1450.2841"
+     id="line104" />
+  <polygon
+     fill="#a52a2a"
+     points="910.7579,1462.034 914.7579,1453.034 910.7579,1457.034 906.7579,1453.034 "
+     style="stroke:#a52a2a;stroke-width:1"
+     id="polygon104"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="137.52721"
+     x="1029.0206"
+     y="1018.953"
+     id="text104"
+     transform="translate(-83.331933,-556.08993)">BLE GATT provisioning</text>
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="396.83029"
+     x2="396.83029"
+     y1="575.70801"
+     y2="605.70801"
+     id="line105" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="396.83029"
+     x2="468.7702"
+     y1="607.70801"
+     y2="607.70801"
+     id="line106" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.99781;stroke-dasharray:6.98467, 6.98467"
+     x1="468.7702"
+     x2="468.7702"
+     y1="607.3429"
+     y2="979.30603"
+     id="line107" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.970003;stroke-dasharray:6.79002, 6.79002"
+     x1="468.81543"
+     x2="468.81543"
+     y1="980.63373"
+     y2="1061.275"
+     id="line109" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.972452;stroke-dasharray:6.80716, 6.80716"
+     x1="468.50897"
+     x2="1070.1858"
+     y1="1065.012"
+     y2="1065.012"
+     id="line110" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1070.1858"
+     x2="1070.1858"
+     y1="1065.012"
+     y2="1400.2841"
+     id="line111" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1070.1858"
+     x2="826.2309"
+     y1="1400.2841"
+     y2="1400.2841"
+     id="line112" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="826.2309"
+     x2="826.2309"
+     y1="1400.2841"
+     y2="1450.2841"
+     id="line113" />
+  <polygon
+     fill="#a52a2a"
+     points="876.9729,1462.034 880.9729,1453.034 876.9729,1457.034 872.9729,1453.034 "
+     style="stroke:#a52a2a;stroke-width:1"
+     id="polygon113"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="139.6071"
+     x="335.69199"
+     y="1018.953"
+     id="text113"
+     transform="rotate(-90,358.91134,916.75096)">Wi-Fi AP / HTTP pairing</text>
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="889.59338"
+     x2="889.59338"
+     y1="928.40997"
+     y2="969.30603"
+     id="line114" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="889.67847"
+     x2="889.67847"
+     y1="968.86566"
+     y2="1024.5715"
+     id="line116" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1.20695;stroke-dasharray:8.4486, 8.4486"
+     x1="889.4339"
+     x2="1114.1858"
+     y1="1025.012"
+     y2="1025.012"
+     id="line117" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1114.1858"
+     x2="1114.1858"
+     y1="1025.012"
+     y2="1541.524"
+     id="line118" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1114.1858"
+     x2="644.54352"
+     y1="1535.524"
+     y2="1535.524"
+     id="line119" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1.28456;stroke-dasharray:8.99186, 8.99186"
+     x1="644.54352"
+     x2="644.54352"
+     y1="1535.0234"
+     y2="1551.524"
+     id="line120" />
+  <polygon
+     fill="#a52a2a"
+     points="695.2855,1563.274 699.2855,1554.274 695.2855,1558.274 691.2855,1554.274 "
+     style="stroke:#a52a2a;stroke-width:1"
+     id="polygon120"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="91.988098"
+     x="909.27252"
+     y="1018.953"
+     id="text120"
+     transform="translate(-12.796339,-3.29348)">NVS read/write</text>
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="696.69037"
+     x2="696.69037"
+     y1="812.35999"
+     y2="1045.012"
+     id="line121" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="696.69037"
+     x2="1092.1858"
+     y1="1045.012"
+     y2="1045.012"
+     id="line122" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.981059;stroke-dasharray:6.86741, 6.86741"
+     x1="1092.1858"
+     x2="1092.1858"
+     y1="1045.012"
+     y2="1245.5209"
+     id="line123" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1092.1858"
+     x2="892.15839"
+     y1="1247.338"
+     y2="1247.338"
+     id="line124" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1.26711;stroke-dasharray:8.86974, 8.86974"
+     x1="892.15839"
+     x2="892.15839"
+     y1="1247.2825"
+     y2="1263.338"
+     id="line125" />
+  <polygon
+     fill="#a52a2a"
+     points="942.9004,1275.088 946.9004,1266.088 942.9004,1270.088 938.9004,1266.088 "
+     style="stroke:#a52a2a;stroke-width:1"
+     id="polygon125"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="99.710098"
+     x="638.34229"
+     y="1018.953"
+     id="text125"
+     transform="rotate(-90,627.14993,958.0132)">SD logger / WAV</text>
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="646.75641"
+     x2="646.75641"
+     y1="812.35999"
+     y2="969.30603"
+     id="line126" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.986971;stroke-dasharray:6.9088, 6.9088"
+     x1="646.79877"
+     x2="646.79877"
+     y1="971.97192"
+     y2="1055.459"
+     id="line128" />
+  <line
+     style="stroke:#a52a2a;stroke-width:0.921162;stroke-dasharray:6.44814, 6.44814"
+     x1="646.76208"
+     x2="1081.1858"
+     y1="1055.012"
+     y2="1055.012"
+     id="line129" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1081.1858"
+     x2="1081.1858"
+     y1="1055.012"
+     y2="1390.2841"
+     id="line130" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="1081.1858"
+     x2="715.51349"
+     y1="1390.2841"
+     y2="1390.2841"
+     id="line131" />
+  <line
+     style="stroke:#a52a2a;stroke-width:1;stroke-dasharray:7, 7"
+     x1="715.51349"
+     x2="715.51349"
+     y1="1390.2841"
+     y2="1453.689"
+     id="line132" />
+  <polygon
+     fill="#a52a2a"
+     points="766.2555,1465.439 770.2555,1456.439 766.2555,1460.439 762.2555,1456.439 "
+     style="stroke:#a52a2a;stroke-width:1"
+     id="polygon132"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="107.5231"
+     x="503.0592"
+     y="1018.953"
+     id="text132"
+     transform="rotate(-90,534.9841,917.06239)">I2S alert playback</text>
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="26.7075"
+     x2="26.7075"
+     y1="55.489998"
+     y2="216.436"
+     id="line133" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="26.736294"
+     x2="26.736294"
+     y1="216.24333"
+     y2="1084.8193"
+     id="line135" />
+  <line
+     style="stroke:#0000ff;stroke-width:1.05075"
+     x1="26.229809"
+     x2="1011.4698"
+     y1="1085.012"
+     y2="1085.012"
+     id="line136" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="1011.4698"
+     x2="1011.4698"
+     y1="1085.012"
+     y2="1266.062"
+     id="line137" />
+  <polygon
+     fill="#0000ff"
+     points="1062.2118,1277.812 1066.2118,1268.812 1062.2118,1272.812 1058.2118,1268.812 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon137"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#0000ff"
+     points="77.4495,67.24 73.4495,76.24 77.4495,72.24 81.4495,76.24 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon138"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="48.2691"
+     x="19.8004"
+     y="149.90401"
+     id="text138"
+     transform="rotate(-90,44.414611,173.39971)">LoRa RF</text>
+  <line
+     style="stroke:#0000ff;stroke-width:1.68906"
+     x1="79.622391"
+     x2="79.622391"
+     y1="55.489998"
+     y2="84.019073"
+     id="line138" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="79.622391"
+     x2="1147.1858"
+     y1="83.489998"
+     y2="83.489998"
+     id="line139" />
+  <line
+     style="stroke:#0000ff;stroke-width:0.992312"
+     x1="1147.1858"
+     x2="1147.1858"
+     y1="83.051125"
+     y2="1436.7883"
+     id="line140" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="1147.1858"
+     x2="893.8009"
+     y1="1436.2841"
+     y2="1436.2841"
+     id="line141" />
+  <line
+     style="stroke:#0000ff;stroke-width:1.20319"
+     x1="893.8009"
+     x2="893.8009"
+     y1="1435.8075"
+     y2="1450.2841"
+     id="line142" />
+  <polygon
+     fill="#0000ff"
+     points="944.5429,1462.034 948.5429,1453.034 944.5429,1457.034 940.5429,1453.034 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon142"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#0000ff"
+     points="130.3644,67.24 126.3644,76.24 130.3644,72.24 134.3644,76.24 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon143"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="266.00629"
+     x="1208.3077"
+     y="149.90401"
+     id="text143"
+     transform="translate(-327.27674,-76.454334)">Wi-Fi AP + HTTP (/identity;/prove;/provision)</text>
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="865.64667"
+     x2="865.64667"
+     y1="1501.524"
+     y2="1652.7639"
+     id="line143" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="865.64667"
+     x2="976.32306"
+     y1="1652.7639"
+     y2="1652.7639"
+     id="line144" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="976.32306"
+     x2="976.32306"
+     y1="1652.7639"
+     y2="1708.47"
+     id="line145" />
+  <polygon
+     fill="#0000ff"
+     points="1027.0651,1720.22 1031.0651,1711.22 1027.0651,1715.22 1023.0651,1711.22 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon145"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#0000ff"
+     points="916.3887,1513.274 912.3887,1522.274 916.3887,1518.274 920.3887,1522.274 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon146"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="96.1091"
+     x="921.57599"
+     y="1692.4109"
+     id="text146"
+     transform="translate(-50.742001,-11.75)">HTTPS REST API</text>
+  <line
+     style="stroke:#0000ff;stroke-width:0.818373"
+     x1="820.6001"
+     x2="820.6001"
+     y1="1501.524"
+     y2="1703.9084"
+     id="line146" />
+  <polygon
+     fill="#0000ff"
+     points="871.3421,1815.46 875.3421,1806.46 871.3421,1810.46 867.3421,1806.46 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon147"
+     transform="translate(-50.742001,-108.84326)" />
+  <polygon
+     fill="#0000ff"
+     points="871.3421,1513.274 867.3421,1522.274 871.3421,1518.274 875.3421,1522.274 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon148"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="62.413101"
+     x="881.72211"
+     y="1752.884"
+     id="text148"
+     transform="rotate(-90,776.28275,1715.0897)">MQTT/TLS</text>
+  <line
+     style="stroke:#0000ff;stroke-width:1.50115"
+     x1="138.48079"
+     x2="138.48079"
+     y1="160.7299"
+     y2="183.26428"
+     id="line148" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="138.48079"
+     x2="1136.1858"
+     y1="182.7299"
+     y2="182.7299"
+     id="line149" />
+  <line
+     style="stroke:#0000ff;stroke-width:0.9956"
+     x1="1136.1858"
+     x2="1136.1858"
+     y1="182.29111"
+     y2="1430.7864"
+     id="line150" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="1136.1858"
+     x2="876.90839"
+     y1="1430.2841"
+     y2="1430.2841"
+     id="line151" />
+  <line
+     style="stroke:#0000ff;stroke-width:1"
+     x1="876.90839"
+     x2="876.90839"
+     y1="1430.2841"
+     y2="1450.2841"
+     id="line152" />
+  <line
+     style="stroke:#0000ff;stroke-width:1.13493"
+     x1="801.37024"
+     x2="801.37024"
+     y1="1677.1479"
+     y2="1702.9091"
+     id="line152-3" />
+  <polygon
+     fill="#0000ff"
+     points="927.6504,1462.034 931.6504,1453.034 927.6504,1457.034 923.6504,1453.034 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon152"
+     transform="translate(-50.742001,-11.75)" />
+  <polygon
+     fill="#0000ff"
+     points="189.2228,172.4799 185.2228,181.4799 189.2228,177.4799 193.2228,181.4799 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon153"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="101.9201"
+     x="1075.6276"
+     y="210.377"
+     id="text153"
+     transform="translate(-44.742001,-33.75)">BLE provisioning</text>
+  <line
+     style="stroke:#0000ff;stroke-width:0.963972"
+     x1="93.094101"
+     x2="93.094101"
+     y1="160.7299"
+     y2="1678.1643"
+     id="line153" />
+  <line
+     style="stroke:#0000ff;stroke-width:1.00143"
+     x1="93.094101"
+     x2="801.02679"
+     y1="1677.71"
+     y2="1677.71"
+     id="line154" />
+  <polygon
+     fill="#0000ff"
+     points="845.7446,1806.46 849.7446,1815.46 853.7446,1806.46 849.7446,1810.46 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon155"
+     transform="translate(-48.523123,-108.32687)" />
+  <polygon
+     fill="#0000ff"
+     points="143.8361,172.4799 139.8361,181.4799 143.8361,177.4799 147.8361,181.4799 "
+     style="stroke:#0000ff;stroke-width:1"
+     id="polygon156"
+     transform="translate(-50.742001,-11.75)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="115.0761"
+     x="19.379999"
+     y="1692.4109"
+     id="text156"
+     transform="rotate(-90,-147.10566,1460.5405)">MQTT commandes</text>
+  <g
+     class="legend"
+     data-source-line="122"
+     id="g177"
+     transform="translate(-1007.3005,-408.11403)">
+    <rect
+       fill="#dddddd"
+       height="156.4075"
+       style="stroke:#000000;stroke-width:1"
+       width="322.8588"
+       x="1133.8352"
+       y="1870.7"
+       id="rect156" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="54.879799"
+       x="1146.4752"
+       y="1896.6659"
+       id="text157">Couleur</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="86.869698"
+       x="1208.995"
+       y="1896.6659"
+       id="text158">Type de Flux</text>
+    <rect
+       fill="#0000ff"
+       height="23.0679"
+       style="stroke:none;stroke-width:1"
+       width="62.519798"
+       x="1140.8352"
+       y="1902.7679"
+       id="rect158" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="3.6400001"
+       x="1142.8352"
+       y="1919.7338"
+       id="text159"> </text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="227.7791"
+       x="1208.995"
+       y="1919.7338"
+       id="text160">Externe (LoRa / Wi-Fi / BLE / MQTT)</text>
+    <rect
+       fill="#008000"
+       height="23.0679"
+       style="stroke:none;stroke-width:1"
+       width="62.519798"
+       x="1140.8352"
+       y="1925.8358"
+       id="rect160" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="3.6400001"
+       x="1142.8352"
+       y="1942.8018"
+       id="text161"> </text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="166.8093"
+       x="1208.995"
+       y="1942.8018"
+       id="text162">Bus numérique (SPI / I2S)</text>
+    <rect
+       fill="#800080"
+       height="23.0679"
+       style="stroke:none;stroke-width:1"
+       width="62.519798"
+       x="1140.8352"
+       y="1948.9037"
+       id="rect162" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="3.6400001"
+       x="1142.8352"
+       y="1965.8696"
+       id="text163"> </text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="145.08141"
+       x="1208.995"
+       y="1965.8696"
+       id="text164">Physique (Flash / NVS)</text>
+    <rect
+       fill="#ff8c00"
+       height="23.0679"
+       style="stroke:none;stroke-width:1"
+       width="62.519798"
+       x="1140.8352"
+       y="1971.9716"
+       id="rect164" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="3.6400001"
+       x="1142.8352"
+       y="1988.9375"
+       id="text165"> </text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="141.2314"
+       x="1208.995"
+       y="1988.9375"
+       id="text166">Logiciel (modes / IPC)</text>
+    <rect
+       fill="#a52a2a"
+       height="23.0679"
+       style="stroke:none;stroke-width:1"
+       width="62.519798"
+       x="1140.8352"
+       y="1995.0396"
+       id="rect166" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="3.6400001"
+       x="1142.8352"
+       y="2012.0055"
+       id="text167"> </text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="14px"
+       lengthAdjust="spacing"
+       textLength="130.1855"
+       x="1208.995"
+       y="2012.0055"
+       id="text168">Drivers / bas niveau</text>
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1140.8352"
+       x2="1449.694"
+       y1="1879.7"
+       y2="1879.7"
+       id="line168" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1140.8352"
+       x2="1449.694"
+       y1="1902.7679"
+       y2="1902.7679"
+       id="line169" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1140.8352"
+       x2="1449.694"
+       y1="1925.8358"
+       y2="1925.8358"
+       id="line170" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1140.8352"
+       x2="1449.694"
+       y1="1948.9037"
+       y2="1948.9037"
+       id="line171" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1140.8352"
+       x2="1449.694"
+       y1="1971.9716"
+       y2="1971.9716"
+       id="line172" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1140.8352"
+       x2="1449.694"
+       y1="1995.0396"
+       y2="1995.0396"
+       id="line173" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1140.8352"
+       x2="1449.694"
+       y1="2018.1074"
+       y2="2018.1074"
+       id="line174" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1140.8352"
+       x2="1140.8352"
+       y1="1879.7"
+       y2="2018.1074"
+       id="line175" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1203.355"
+       x2="1203.355"
+       y1="1879.7"
+       y2="2018.1074"
+       id="line176" />
+    <line
+       style="stroke:#000000;stroke-width:1"
+       x1="1449.694"
+       x2="1449.694"
+       y1="1879.7"
+       y2="2018.1074"
+       id="line177" />
+  </g>
+  <line
+     style="stroke:#ff8c00;stroke-width:0.960395"
+     x1="424.33578"
+     x2="424.33578"
+     y1="705.91058"
+     y2="757.29156"
+     id="line59" />
+</svg>

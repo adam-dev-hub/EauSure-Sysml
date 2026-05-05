@@ -1,0 +1,113 @@
+@startuml EauSure_UC00_Global
+
+left to right direction
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam actorStyle awesome
+skinparam usecaseBorderColor #2C7BB6
+skinparam usecaseBackgroundColor #EAF4FB
+skinparam usecaseBorderThickness 1.5
+skinparam ArrowColor #444444
+skinparam ArrowFontSize 10
+skinparam actorBackgroundColor #FFF8E7
+skinparam actorBorderColor #E69500
+skinparam shadowing false
+skinparam ranksep 50
+skinparam nodesep 30
+
+
+
+actor "Utilisateur" as User
+actor "Administrateur\n(propriétaire)" as Admin
+
+rectangle " Système EauSûre" {
+
+  together {
+    usecase "Accéder au\ntableau de bord"      as UC_Dashboard
+    usecase "Gérer\nle hardware"               as UC_HardwareMgmt
+    usecase "Configurer\nle système"           as UC_ConfigSystem
+    usecase "Gérer les mises\nà jour"          as UC_UserUpdateMgmt
+    usecase "Demander de l'assistance\ntechnique"            as UC_TechSupport
+  }
+
+  together {
+    usecase "Gérer les utilisateurs\net les rôles"      as UC_ManageUsers
+    usecase "Pré-enregistrer\nles équipements"          as UC_PreregisterEquip
+    usecase "Superviser l'état\nglobal de la solution"                 as UC_AdminSupervision
+    usecase "Maintenir\nle système"                     as UC_MaintainSystem
+    usecase "Traiter les réclamations\net incidents"    as UC_HandleIssues
+    usecase "Fournir la documentation\net l'assistance" as UC_DocumentSupport
+  }
+
+  usecase "S'authentifier" as UC_Auth
+}
+
+' ── Separation des deux rangees
+UC_Dashboard -[hidden]down- UC_ManageUsers
+
+' ── Ordre horizontal rangee User
+UC_Dashboard      -[hidden]right- UC_HardwareMgmt
+UC_HardwareMgmt   -[hidden]right- UC_ConfigSystem
+UC_ConfigSystem   -[hidden]right- UC_UserUpdateMgmt
+UC_UserUpdateMgmt -[hidden]right- UC_TechSupport
+
+' ── Ordre horizontal rangee Admin
+UC_ManageUsers      -[hidden]right- UC_PreregisterEquip
+UC_PreregisterEquip -[hidden]right- UC_AdminSupervision
+UC_AdminSupervision -[hidden]right- UC_MaintainSystem
+UC_MaintainSystem   -[hidden]right- UC_HandleIssues
+UC_HandleIssues     -[hidden]right- UC_DocumentSupport
+
+' ── Auth ancree a droite
+UC_TechSupport     -[hidden]right- UC_Auth
+UC_DocumentSupport -[hidden]right- UC_Auth
+
+' ── Acteurs a gauche
+User  -[hidden]down- Admin
+
+' ── Associations directes acteurs → UC_Auth
+User  --> UC_Auth
+Admin --> UC_Auth
+
+' ── Associations Utilisateur → UC metier
+User --> UC_Dashboard
+User --> UC_HardwareMgmt
+User --> UC_ConfigSystem
+User --> UC_UserUpdateMgmt
+User --> UC_TechSupport
+
+' ── Associations Administrateur → UC metier
+Admin --> UC_ManageUsers
+Admin --> UC_PreregisterEquip
+Admin --> UC_AdminSupervision
+Admin --> UC_MaintainSystem
+Admin --> UC_HandleIssues
+Admin --> UC_DocumentSupport
+
+' ── Include Auth depuis chaque UC parent (dependance fonctionnelle)
+UC_Dashboard      ..> UC_Auth : <<include>>
+UC_HardwareMgmt   ..> UC_Auth : <<include>>
+UC_ConfigSystem   ..> UC_Auth : <<include>>
+UC_UserUpdateMgmt ..> UC_Auth : <<include>>
+UC_TechSupport    ..> UC_Auth : <<include>>
+
+UC_ManageUsers      ..> UC_Auth : <<include>>
+UC_PreregisterEquip ..> UC_Auth : <<include>>
+UC_AdminSupervision ..> UC_Auth : <<include>>
+UC_MaintainSystem   ..> UC_Auth : <<include>>
+UC_HandleIssues     ..> UC_Auth : <<include>>
+UC_DocumentSupport  ..> UC_Auth : <<include>>
+
+note bottom of User
+  Voir UC-01 pour le
+  raffinement utilisateur
+end note
+
+note top of Admin
+  Rôle propriétaire.
+  Voir UC-02 pour le
+  raffinement administrateur.
+end note
+
+@enduml

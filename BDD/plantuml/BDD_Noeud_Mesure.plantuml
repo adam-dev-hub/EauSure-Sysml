@@ -1,0 +1,153 @@
+@startuml BDD_Systeme_Complet
+!pragma layout elk
+top to bottom direction
+
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam roundCorner 0
+skinparam nodesep 20
+skinparam ranksep 30
+' --- Padding réduit pour des cartes plus fines ---
+skinparam padding 2
+
+' ── Blocs (En-têtes affinés) ───────────────────────────
+skinparam class {
+    BackgroundColor White
+    HeaderBackgroundColor #B8D9F5
+    BorderColor #444444
+    FontColor Black
+    AttributeFontColor Black
+    StereotypeFontColor #555555
+    FontSize 10
+    AttributeFontSize 9
+    StereotypeFontSize 8
+}
+
+' ── Packages ──────────────────────────────────────────
+skinparam package {
+    BackgroundColor #FFFFCC
+    BorderColor #BBBB00
+    BorderThickness 1.5
+    FontColor #333300
+    FontSize 11
+    FontStyle bold
+}
+
+hide empty methods
+hide circle
+
+' ========================================================
+' CONTEXTE
+' ========================================================
+class "Passerelle IoT" as Gateway <<external>>
+class "API d'Appairage" as ApiPair <<external>>
+class "Nœud de Mesure" as Node <<system>> {
+    + ID : addr unique Hex
+    + Mode : Normal | Appairage | FUOTA
+}
+
+Gateway "1" -right- "1..*" Node : " LoRa "
+ApiPair <-right-> Node : " HTTPS "
+
+' ========================================================
+' MODULES LOGICIELS
+' ========================================================
+package "Modules Logiciels (FreeRTOS)" {
+
+    class "Appairage & FUOTA" as SoftPair <<software>> {
+        + appairage()
+        + validerSignature()
+        + configDistante()
+        + màjFirmware()
+    }
+
+    class "Pile de Communication" as SoftCom <<software>> {
+        + chiffrageAES()
+        + gestionTrame()
+    }
+
+    class "Contrôleur Acquisition" as SoftAcq <<software>> {
+        + mesurerQualitéEau()
+        + détecterSecousses()
+        + monitorerEnergie()
+        + gérerMiseEnVeille()
+    }
+    
+    class "Contrôleur Affichage" as SoftDisp <<software>> {
+        + màjAffichage()
+        + activierIndicateur()
+    }
+
+    class "État Partagé" as SoftState <<shared>> {
+        + verrous_mutex
+        + variables_globales
+    }
+
+    ' --- Grille ajustée ---
+    SoftPair -[hidden]right- SoftCom
+    SoftAcq  -[hidden]right- SoftDisp
+    SoftPair -[hidden]down-  SoftAcq
+    SoftAcq  -[hidden]down-  SoftState
+}
+
+' ========================================================
+' COMPOSANTS MATÉRIELS
+' ========================================================
+package "Composants Matériels" {
+
+    class "Microcontrôleur" as HardMCU <<hardware>> {
+        + ESP32 (Dual Core)
+        + Mémoire Flash
+    }
+
+    class "Module Radio" as HardRadio <<hardware>> {
+        + LoRa SX1276 (SPI)
+    }
+
+    class "Grappe Capteurs" as HardSensors <<hardware>> {
+        + Sondes Qualité de l'eau (ADC)
+        + Capteur Température de l'eau (OneWire)
+        + Capteur Température ESP-S3/Gy-521 (GPIO/I2C)
+        + MPU6050 (I2C)
+    }
+
+    class "Énergie & Alim" as HardPower <<hardware>> {
+        + Batterie / Régulateur 3V3 / Booster DC-DC
+        + Moniteur INA219 (I2C)
+    }
+
+    class "Stockage NVS" as HardMemo <<hardware>> {
+        + Mémoire Flash interne du MCU
+        + gestionNVS(Config, FUOTA, KEYS)
+    }
+
+    class "Interface IHM" as HardUI <<hardware>> {
+        + OLED (I2C)
+        + LED Neopixel RGB (GPIO)
+    }
+
+    ' --- Grille matérielle sur 2 niveaux ---
+    HardMCU -[hidden]right- HardRadio
+    HardRadio -[hidden]right- HardSensors
+    HardMCU -[hidden]down- HardPower
+    HardPower -[hidden]right- HardUI
+    HardSensors -[hidden]down- HardMemo
+}
+
+' ========================================================
+' COMPOSITIONS
+' ========================================================
+Node *-down-> SoftPair
+Node *-down-> SoftCom
+Node *-down-> SoftAcq
+Node *-down-> SoftDisp
+Node *-down-> SoftState
+
+Node *-down-> HardMCU
+Node *-down-> HardRadio
+Node *-down-> HardSensors
+Node *-down-> HardPower
+Node *-down-> HardUI
+Node *-down-> HardMemo
+
+@enduml

@@ -1,0 +1,132 @@
+@startuml IBD_Passerelle_EauSure
+!pragma layout elk
+top to bottom direction
+
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam roundCorner 0
+skinparam nodesep 24
+skinparam ranksep 30
+skinparam padding 2
+
+skinparam rectangle {
+    FontSize 10
+    BorderColor #444444
+    FontColor Black
+}
+
+skinparam package {
+    FontSize 11
+    FontStyle bold
+    BorderThickness 1.5
+}
+
+rectangle "Nœud de Mesure" as EXTNODE <<external>> #F5F5F5
+rectangle "Application Mobile/Web" as EXTAPP <<external>> #F5F5F5
+rectangle "API Cloud EauSûre" as EXTAPI <<external>> #F5F5F5
+rectangle "Broker MQTT" as EXTMQTT <<external>> #F5F5F5
+
+EXTNODE -[hidden]right- EXTAPP
+EXTAPI  -[hidden]right- EXTMQTT
+
+frame "ibd [Système] Passerelle IoT (Gateway)" {
+
+    ' ========================================================
+    ' BLOCS LOGICIELS
+    ' ========================================================
+    package "Modules Logiciels" #FFFFCC {
+        rectangle "Orchestrateur de Modes" as sModes
+        rectangle "Provisioning BLE" as sProv
+        rectangle "Appairage Nœud" as sPair
+        rectangle "Communication LoRa Sécurisée" as sLoRa
+        rectangle "Activation LoRa Sécurisée /\nScheduler" as sAct
+        rectangle "Télémétrie & Alertes" as sTel
+        rectangle "Connectivité Cloud" as sCloud
+        rectangle "Persistance Locale" as sStore #B8D9F5
+
+        sModes -[hidden]right- sProv
+        sProv  -[hidden]right- sPair
+        sPair  -[hidden]right- sLoRa
+        sLoRa  -[hidden]down-  sAct
+        sAct   -[hidden]left-  sTel
+        sTel   -[hidden]left-  sCloud
+        sCloud -[hidden]down-  sStore
+    }
+
+    ' ========================================================
+    ' BLOCS MATÉRIELS
+    ' ========================================================
+    package "Composants Matériels" #E8F5E9 {
+        rectangle "MCU ESP32" as hMCU
+        rectangle "Module LoRa SX127x" as hLoRa
+        rectangle "Sous-système Wi-Fi/BLE\n(intégré ESP32)" as hWifi
+        rectangle "NVS\n(flash interne ESP32)" as hNvs
+        rectangle "microSD\n(SPI dédié / HSPI)" as hSD
+        rectangle "Audio I2S + MAX98357A + HP" as hAudio
+
+        hMCU  -[hidden]right- hLoRa
+        hLoRa -[hidden]right- hWifi
+        hMCU  -[hidden]down-  hSD
+        hSD   -[hidden]right- hAudio
+        hAudio -[hidden]right- hNvs
+    }
+
+    ' ========================================================
+    ' BUS NUMÉRIQUES & SIGNAUX (VERT)
+    ' ========================================================
+    hMCU <--> hLoRa  #008000;text:008000 : " SPI / IRQ "
+    hMCU <--> hWifi  #008000;text:008000 : " Wi-Fi 802.11 / BLE "
+    hMCU <--> hSD    #008000;text:008000 : " SPI (HSPI) "
+    hMCU <--> hAudio #008000;text:008000 : " I2S "
+
+    ' ========================================================
+    ' ACCÈS MÉMOIRE PHYSIQUE (VIOLET)
+    ' ========================================================
+    hMCU <..> hNvs   #800080;text:800080 : " Flash / NVS "
+
+    ' ========================================================
+    ' FLUX LOGICIELS INTERNES / IPC (ORANGE)
+    ' ========================================================
+    sModes <--> sProv  #FF8C00;text:FF8C00 : " Mode Provisioning "
+    sModes <--> sPair  #FF8C00;text:FF8C00 : " Mode Appairage "
+    sModes <--> sLoRa  #FF8C00;text:FF8C00 : " Mode Normal "
+    sLoRa  <--> sAct   #FF8C00;text:FF8C00 : " ACTIVATE / MEASURE / HB "
+    sLoRa  <--> sTel   #FF8C00;text:FF8C00 : " DATA frames "
+    sPair  <--> sCloud #FF8C00;text:FF8C00 : " verifyProof / fetchKey "
+    sTel   <--> sCloud #FF8C00;text:FF8C00 : " Upload cloud "
+    sProv  <--> sStore #FF8C00;text:FF8C00 : " Wi-Fi creds "
+    sPair  <--> sStore #FF8C00;text:FF8C00 : " Pairing / clés "
+    sTel   <--> sStore #FF8C00;text:FF8C00 : " WAV / logs SD "
+
+    ' ========================================================
+    ' DRIVERS LOGICIEL -> MATÉRIEL (MARRON)
+    ' ========================================================
+    sLoRa  ..> hLoRa  #A52A2A;text:A52A2A : " Driver LoRa/SPI "
+    sCloud ..> hWifi  #A52A2A;text:A52A2A : " Wi-Fi + TLS + MQTT "
+    sProv  ..> hWifi  #A52A2A;text:A52A2A : " BLE GATT provisioning "
+    sPair  ..> hWifi  #A52A2A;text:A52A2A : " Wi-Fi AP / HTTP pairing "
+    sStore ..> hNvs   #A52A2A;text:A52A2A : " NVS read/write "
+    sTel   ..> hSD    #A52A2A;text:A52A2A : " SD logger / WAV "
+    sTel   ..> hAudio #A52A2A;text:A52A2A : " I2S alert playback "
+}
+
+' ========================================================
+' FLUX EXTERNES (BLEU) — hors frontière système
+' ========================================================
+EXTNODE <--> hLoRa   #0000FF;text:0000FF : " LoRa RF "
+EXTNODE <--> hWifi   #0000FF;text:0000FF : " Wi-Fi AP + HTTP (/identity,/prove,/provision) "
+hWifi   <--> EXTAPI  #0000FF;text:0000FF : " HTTPS REST API "
+hWifi   <--> EXTMQTT #0000FF;text:0000FF : " MQTT/TLS "
+EXTAPP  <--> hWifi   #0000FF;text:0000FF : " BLE provisioning "
+EXTAPP  <--> EXTMQTT #0000FF;text:0000FF : " MQTT commandes "
+
+legend right
+  |= Couleur|= Type de Flux                          |
+  |<#0000FF>| Externe (LoRa / Wi-Fi / BLE / MQTT)   |
+  |<#008000>| Bus numérique (SPI / I2S)             |
+  |<#800080>| Physique (Flash / NVS)                |
+  |<#FF8C00>| Logiciel (modes / IPC)                |
+  |<#A52A2A>| Drivers / bas niveau                  |
+endlegend
+
+@enduml

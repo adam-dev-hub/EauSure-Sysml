@@ -1,0 +1,79 @@
+@startuml IBD_API_Global_EauSure
+!pragma layout elk
+top to bottom direction
+
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam nodesep 20
+skinparam ranksep 30
+skinparam padding 3
+
+rectangle "Application Mobile/Web" as EXTAPP <<external>> #F0F0F0
+rectangle "Passerelle IoT"         as EXTGW  <<external>> #F0F0F0
+
+rectangle "MongoDB Atlas"  as EXTDB   <<external>> #F0F0F0
+rectangle "Broker MQTT"    as EXTMQTT <<external>> #F0F0F0
+
+EXTAPP -[hidden]right- EXTGW
+
+note as NoteJWT
+  <b>JWT_SECRET partagé</b>
+  par variable d'environnement
+  — aucun appel inter-services
+end note
+
+frame "ibd [Système] Écosystème API EauSûre" {
+
+    package "Services API" #FFFFCC {
+        rectangle "Auth API" as sAuth
+        rectangle "Profile API" as sProfile
+        rectangle "Hardware API" as sHardware
+        sAuth -[hidden]right- sProfile
+        sProfile -[hidden]right- sHardware
+    }
+
+    package "Sous-services Hardware API" #E8F5E9 {
+        rectangle "Routes\nSensorData · Gateways · Registry" as sRoutes
+        rectangle "Service\nCommandes" as sCommand
+        rectangle "Service\nAppairage" as sPairing
+        rectangle "Service\nMQTT" as sMqttSvc
+        rectangle "Modèles\nPasserelle · Nœud · Capteurs\nCommande · Session · Utilisateur" as sModels
+
+        sRoutes  -[hidden]right- sCommand
+        sCommand -[hidden]right- sPairing
+        sPairing -[hidden]right- sMqttSvc
+    }
+
+    sHardware <--> sRoutes  #FF8C00;text:FF8C00 : " dispatch routes "
+    sHardware <--> sCommand #FF8C00;text:FF8C00 : " cycle commande "
+    sHardware <--> sPairing #FF8C00;text:FF8C00 : " preuve / jeton / AES "
+    sHardware <--> sMqttSvc #FF8C00;text:FF8C00 : " publication événements "
+    sHardware <--> sModels  #FF8C00;text:FF8C00 : " persistance "
+
+    sRoutes  ..> sModels #A52A2A;text:A52A2A : " CRUD + agrégats "
+    sCommand ..> sModels #A52A2A;text:A52A2A : " modèle Commande "
+}
+
+EXTAPP -down-> sAuth     #0000FF;text:0000FF : " /api/auth/* (login / OAuth / JWT) "
+EXTAPP -down-> sProfile  #0000FF;text:0000FF : " /api/profile (Bearer JWT) "
+EXTAPP -down-> sHardware #0000FF;text:0000FF : " /api/gateways · /api/sensor-data (JWT) "
+EXTGW  -down-> sHardware #0000FF;text:0000FF : " /api/sensor-data · /api/registry/* (clé API) "
+
+sAuth     -down-> EXTDB   #0000FF;text:0000FF : " MongoDB · users "
+sProfile  -down-> EXTDB   #0000FF;text:0000FF : " MongoDB · profiles "
+sHardware -down-> EXTDB   #0000FF;text:0000FF : " MongoDB · passerelles / nœuds / capteurs "
+sMqttSvc  -down-> EXTMQTT #0000FF;text:0000FF : " télémétrie · commandes "
+
+EXTDB   -[hidden]right- EXTMQTT
+
+NoteJWT .. sAuth
+NoteJWT .. sHardware
+
+legend right
+  |= Couleur |= Type de flux                        |
+  |<#0000FF> | Externe (HTTPS / JWT / clé API / DB) |
+  |<#FF8C00> | Interactions internes Hardware API    |
+  |<#A52A2A> | Accès base de données (Mongoose)      |
+endlegend
+
+@enduml

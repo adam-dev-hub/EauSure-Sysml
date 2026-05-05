@@ -1,0 +1,45 @@
+@startuml EauSure_UC02_Admin_Part1
+
+left to right direction
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam actorStyle awesome
+skinparam usecaseBorderColor #1A6B3C
+skinparam usecaseBackgroundColor #EAF7EF
+skinparam usecaseBorderThickness 1.5
+skinparam ArrowColor #444444
+skinparam ArrowFontSize 10
+skinparam ArrowFontColor #444444
+skinparam actorBackgroundColor #FFF8E7
+skinparam actorBorderColor #E69500
+skinparam shadowing false
+
+actor "Administrateur\n(propriétaire)" as Admin
+
+rectangle "[uc_02.1] Système EauSûre - Vue administrateur" {
+
+  usecase "Gérer les utilisateurs\net les rôles" as UC_ManageUsers
+  usecase "Pré-enregistrer\nles équipements" as UC_PreregisterEquip
+
+  usecase "Superviser l'état global\nde la solution" as UC_AdminSupervision
+  usecase "Consulter le statut\nde fonctionnement" as UC_Status
+  usecase "Collecter les statistiques\net les retours" as UC_CollectStats
+  usecase "Étudier l'efficacité\nde la solution" as UC_StudyEfficiency
+}
+
+Admin -right-> UC_ManageUsers
+Admin -right-> UC_PreregisterEquip
+Admin -right-> UC_AdminSupervision
+
+' Supervision
+UC_AdminSupervision <.. UC_Status : «extend»
+UC_AdminSupervision <.. UC_CollectStats : «extend»
+UC_AdminSupervision <.. UC_StudyEfficiency : «extend»
+UC_CollectStats <.. UC_StudyEfficiency : «include»
+
+' Contraintes horizontales
+UC_ManageUsers -[hidden]right- UC_PreregisterEquip
+UC_PreregisterEquip -[hidden]right- UC_AdminSupervision
+
+@enduml

@@ -1,0 +1,84 @@
+@startuml EauSure_UC02_Admin
+
+top to bottom direction
+
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam actorStyle awesome
+skinparam usecaseBorderColor #1A6B3C
+skinparam usecaseBackgroundColor #EAF7EF
+skinparam usecaseBorderThickness 1.5
+skinparam ArrowColor #444444
+skinparam ArrowFontSize 10
+skinparam actorBackgroundColor #FFF8E7
+skinparam actorBorderColor #E69500
+skinparam shadowing false
+skinparam ranksep 35
+skinparam nodesep 20
+
+actor "Administrateur\n(propriétaire)" as Admin
+
+rectangle "[uc_02] Système EauSûre - Vue Administrateur" {
+
+  ' ── Groupe 1 — Gestion utilisateurs
+  usecase "Gérer les utilisateurs\net les rôles"  as UC_ManageUsers
+  usecase "Pré-enregistrer\nles équipements"      as UC_PreregisterEquip
+
+  ' ── Groupe 2 — Supervision
+  usecase "Superviser l'état global\nde la solution"       as UC_AdminSupervision
+  usecase "Consulter le statut\nde fonctionnement"           as UC_HealthStatus
+  usecase "Collecter les statistiques\net les retours"     as UC_CollectStats
+  usecase "Étudier l'efficacité\nde la solution"           as UC_StudyEfficiency
+
+  ' ── Groupe 3 — Maintenance
+  usecase "Maintenir le système"                            as UC_MaintainSystem
+  usecase "Développer une nouvelle\nversion du firmware"   as UC_DevelopFirmware
+  usecase "Déployer les mises\nà jour du firmware"         as UC_AdminDeployUpdates
+
+  ' ── Groupe 4 — Support
+  usecase "Traiter les réclamations\net les incidents"     as UC_HandleIssues
+  usecase "Fournir la documentation\net l'assistance"      as UC_DocumentSupport
+}
+
+' ── Associations acteur (parents uniquement)
+Admin --> UC_ManageUsers
+Admin --> UC_PreregisterEquip
+Admin --> UC_AdminSupervision
+Admin --> UC_MaintainSystem
+Admin --> UC_HandleIssues
+Admin --> UC_DocumentSupport
+
+' ── Groupe 2 — Supervision
+UC_HealthStatus    ..> UC_AdminSupervision : <<extend>>
+UC_CollectStats    ..> UC_AdminSupervision : <<extend>>
+UC_StudyEfficiency ..> UC_AdminSupervision : <<extend>>
+UC_StudyEfficiency ..> UC_CollectStats    : <<include>>
+
+' ── Groupe 3 — Maintenance
+UC_DevelopFirmware    ..> UC_MaintainSystem    : <<extend>>
+UC_AdminDeployUpdates ..> UC_MaintainSystem    : <<extend>>
+UC_AdminDeployUpdates ..> UC_DevelopFirmware   : <<include>>
+
+' ══════════════════════════════════════════════
+' LAYOUT
+' ══════════════════════════════════════════════
+
+' Colonne parents
+UC_ManageUsers      -[hidden]down- UC_AdminSupervision
+UC_AdminSupervision -[hidden]down- UC_MaintainSystem
+UC_MaintainSystem   -[hidden]down- UC_HandleIssues
+UC_HandleIssues     -[hidden]down- UC_DocumentSupport
+
+' Bande 1 — Gestion utilisateurs (pas d'enfants, UC_PreregisterEquip indépendant)
+UC_ManageUsers -[hidden]right- UC_PreregisterEquip
+
+' Bande 2 — Supervision
+UC_AdminSupervision -[hidden]right- UC_HealthStatus
+UC_HealthStatus     -[hidden]right- UC_CollectStats
+UC_CollectStats     -[hidden]right- UC_StudyEfficiency
+
+' Bande 3 — Maintenance
+UC_MaintainSystem  -[hidden]right- UC_DevelopFirmware
+UC_DevelopFirmware -[hidden]right- UC_AdminDeployUpdates
+
+@enduml

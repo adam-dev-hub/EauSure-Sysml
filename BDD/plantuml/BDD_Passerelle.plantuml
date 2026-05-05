@@ -1,0 +1,180 @@
+@startuml BDD_Passerelle_EauSure
+!pragma layout elk
+top to bottom direction
+
+skinparam linetype ortho
+skinparam defaultFontName Arial
+skinparam roundCorner 0
+skinparam nodesep 20
+skinparam ranksep 30
+skinparam padding 2
+
+skinparam class {
+    BackgroundColor White
+    HeaderBackgroundColor #B8D9F5
+    BorderColor #444444
+    FontColor Black
+    AttributeFontColor Black
+    StereotypeFontColor #555555
+    FontSize 10
+    AttributeFontSize 9
+    StereotypeFontSize 8
+}
+
+skinparam package {
+    BackgroundColor #FFFFCC
+    BorderColor #BBBB00
+    BorderThickness 1.5
+    FontColor #333300
+    FontSize 11
+    FontStyle bold
+}
+
+hide empty methods
+hide circle
+
+' ========================================================
+' CONTEXTE
+' ========================================================
+class "Passerelle IoT" as Gateway <<system>> {
+    + Mode : Provisioning | Appairage Nœud | Normal
+    + GatewayHardwareId : WiFi MAC
+}
+
+class "Nœud de Mesure" as Node <<external>>
+class "API Cloud EauSûre" as ApiCloud <<external>>
+class "Broker MQTT" as MqttBroker <<external>>
+class "Application Mobile/Web" as UserApp <<external>>
+
+Gateway "1" -right- "1..*" Node : " LoRa "
+Gateway -down- ApiCloud : " HTTPS REST "
+Gateway -down- MqttBroker : " MQTT/TLS "
+UserApp -left- Gateway : " BLE provisioning "
+UserApp -right- MqttBroker : " MQTT commandes "
+
+UserApp -[hidden]down- Gateway
+ApiCloud -[hidden]right- MqttBroker
+
+' ========================================================
+' MODULES LOGICIELS
+' ========================================================
+package "Modules Logiciels" {
+
+    class "Orchestrateur de Modes" as SoftModes <<software>> {
+        + setup()/loop()
+        + provisioningMode()
+        + nodePairingMode()
+        + normalMode()
+    }
+
+    class "Provisioning BLE" as SoftProv <<software>> {
+        + bleProvisioning()
+        + recevoirConfig()
+        + sauvegarderWifi()
+    }
+
+    class "Appairage Nœud" as SoftPair <<software>> {
+        + détecterCandidat()
+        + vérifierPreuve()
+        + envoyerProvision()
+        + enregistrerClé()
+    }
+
+    class "Communication LoRa Sécurisée" as SoftLoRa <<software>> {
+        + sendActivate()
+        + sendMeasureReq()
+        + parseDataFrame()
+        + ackTransport()
+    }
+
+    class "Activation LoRa Sécurisée / Scheduler" as SoftAct <<software>> {
+        + activateRetry()
+        + heartbeatSchedule()
+        + measureSchedule()
+    }
+
+    class "Télémétrie & Alertes" as SoftTel <<software>> {
+        + queueUpload()
+        + cloudSubmit()
+        + collectAlertFiles()
+        + playQueuedAlerts()
+    }
+
+    class "Connectivité Cloud" as SoftCloud <<software>> {
+        + wifiManager()
+        + mqttGateway()
+        + apiClient()
+    }
+
+    class "Persistance Locale" as SoftStore <<shared>> {
+        + WifiStore (NVS)
+        + NodePairingStore (NVS)
+        + SD logger / WAV
+    }
+
+    SoftModes -[hidden]right- SoftProv
+    SoftProv  -[hidden]right- SoftPair
+    SoftPair  -[hidden]right- SoftLoRa
+    SoftLoRa  -[hidden]right- SoftAct
+    SoftAct   -[hidden]down-  SoftTel
+    SoftTel   -[hidden]left-  SoftCloud
+    SoftCloud -[hidden]left-  SoftStore
+}
+
+' ========================================================
+' COMPOSANTS MATÉRIELS
+' ========================================================
+package "Composants Matériels" {
+
+    class "Microcontrôleur" as HardMCU <<hardware>> {
+        + ESP32 DevKit
+        + Wi-Fi / BLE intégrés
+        + Flash interne
+    }
+
+    class "Module Radio LoRa" as HardLoRa <<hardware>> {
+        + SX127x (SPI)
+        + Antenne externe
+    }
+
+    class "Stockage microSD" as HardSD <<hardware>> {
+        + Carte microSD
+        + Bus SPI dédié (HSPI)
+    }
+
+    class "Chaîne Audio" as HardAudio <<hardware>> {
+        + I2S + MAX98357A
+        + Haut-parleur
+    }
+
+    class "Stockage NVS" as HardNvs <<hardware>> {
+        + Flash interne ESP32
+        + Préférences Wi-Fi
+        + Données d'appairage
+    }
+
+    HardMCU -[hidden]right- HardLoRa
+    HardLoRa -[hidden]right- HardSD
+    HardMCU -[hidden]down- HardAudio
+    HardAudio -[hidden]right- HardNvs
+}
+
+' ========================================================
+' COMPOSITIONS
+' ========================================================
+Gateway *-down-> SoftModes
+Gateway *-down-> SoftProv
+Gateway *-down-> SoftPair
+Gateway *-down-> SoftLoRa
+Gateway *-down-> SoftAct
+Gateway *-down-> SoftTel
+Gateway *-down-> SoftCloud
+Gateway *-down-> SoftStore
+
+Gateway *-down-> HardMCU
+Gateway *-down-> HardLoRa
+Gateway *-down-> HardSD
+Gateway *-down-> HardAudio
+Gateway *-down-> HardNvs
+
+@enduml

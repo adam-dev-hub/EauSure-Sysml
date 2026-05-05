@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?plantuml 1.2026.2?><svg
+   contentStyleType="text/css"
+   data-diagram-type="CLASS"
+   height="652.61652"
+   preserveAspectRatio="none"
+   version="1.1"
+   viewBox="0 0 550.28619 652.61651"
+   width="550.28619"
+   zoomAndPan="magnify"
+   id="svg77"
+   sodipodi:docname="BDD_Global.svg"
+   inkscape:version="1.4.4rc (12926ee9f3, 2026-04-30)"
+   inkscape:export-filename="BDD_Global.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.53846154"
+     inkscape:cx="175.5"
+     inkscape:cy="493.07143"
+     inkscape:window-width="1536"
+     inkscape:window-height="795"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg77" />
+  <title
+     id="title1">&lt;b&gt;BDD Global — Système EauSûre&lt;/b&gt;
+&lt;i&gt;Vue d'ensemble · IoT &amp; Systèmes Embarqués&lt;/i&gt;</title>
+  <defs
+     id="defs1" />
+  <g
+     class="entity"
+     data-qualified-name="Node"
+     data-source-line="37"
+     id="ent0002"
+     transform="translate(-26.0255,-74.885803)">
+    <rect
+       fill="#ffffff"
+       height="140.271"
+       style="stroke:#444444;stroke-width:0.5"
+       width="167.7583"
+       x="144.76241"
+       y="75.135803"
+       id="rect2" />
+    <rect
+       fill="#b8d9f5"
+       height="38.895901"
+       style="stroke:#444444;stroke-width:0.5"
+       width="167.7583"
+       x="144.76241"
+       y="75.135803"
+       id="rect3" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="7px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="23.113899"
+       x="217.08459"
+       y="89.618797"
+       id="text3">«block»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="65.463203"
+       x="195.91"
+       y="104.6877"
+       id="text4">Nœud de Mesure</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="145.76241"
+       x2="311.52069"
+       y1="114.0317"
+       y2="114.0317"
+       id="line4" />
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g4">
+      <circle
+         cx="155.76241"
+         cy="126.9796"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse4"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="56.951302"
+       x="166.76241"
+       y="128.5836"
+       id="text5">ID : hex unique</text>
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g5">
+      <circle
+         cx="155.76241"
+         cy="141.8755"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse5"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="137.7583"
+       x="166.76241"
+       y="143.4794"
+       id="text6">Mode : Normal | Appairage | FUOTA</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="100.4353"
+       x="152.76241"
+       y="177.27119"
+       id="text7">○ LoRa RF ↔ Passerelle</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="143.9628"
+       x="152.76241"
+       y="192.16701"
+       id="text8">○ Wi-Fi AP ↔ Passerelle (appairage)</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="116.379"
+       x="152.76241"
+       y="207.0629"
+       id="text9">○ HTTPS → API (pair-node)</text>
+    <line
+       style="stroke:#444444;stroke-width:1"
+       x1="145.76241"
+       x2="216.7897"
+       y1="159.2713"
+       y2="159.2713"
+       id="line9" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="19.7038"
+       x="218.7897"
+       y="161.87531"
+       id="text10">Ports</text>
+    <line
+       style="stroke:#444444;stroke-width:1"
+       x1="240.49339"
+       x2="311.52069"
+       y1="159.2713"
+       y2="159.2713"
+       id="line10" />
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="AppClient"
+     data-source-line="46"
+     id="ent0003"
+     transform="translate(-26.0255,-200.8858)">
+    <rect
+       fill="#ffffff"
+       height="76.687599"
+       style="stroke:#444444;stroke-width:0.5"
+       width="76.7034"
+       x="499.35831"
+       y="275.4068"
+       id="rect10" />
+    <rect
+       fill="#b8d9f5"
+       height="38.895901"
+       style="stroke:#444444;stroke-width:0.5"
+       width="76.7034"
+       x="499.35831"
+       y="275.4068"
+       id="rect11" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="7px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="31.989901"
+       x="521.71503"
+       y="289.8898"
+       id="text11">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="66.695198"
+       x="504.3624"
+       y="304.95871"
+       id="text12">App Web / Mobile</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="500.35831"
+       x2="575.06158"
+       y1="314.3027"
+       y2="314.3027"
+       id="line12" />
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g12">
+      <circle
+         cx="510.35831"
+         cy="327.25061"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse12"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="45.263401"
+       x="521.35828"
+       y="328.85461"
+       id="text13">HTTPS / JWT</text>
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g13">
+      <circle
+         cx="510.35831"
+         cy="342.14651"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse13"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="46.7034"
+       x="521.35828"
+       y="343.75049"
+       id="text14">BLE · MQTT</text>
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Gateway"
+     data-source-line="57"
+     id="ent0005"
+     transform="translate(-26.0255,-200.8858)">
+    <rect
+       fill="#ffffff"
+       height="155.1669"
+       style="stroke:#444444;stroke-width:0.5"
+       width="188.67"
+       x="201.2429"
+       y="445.50641"
+       id="rect14" />
+    <rect
+       fill="#b8d9f5"
+       height="38.895901"
+       style="stroke:#444444;stroke-width:0.5"
+       width="188.67"
+       x="201.2429"
+       y="445.50641"
+       id="rect15" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="7px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="23.113899"
+       x="284.0209"
+       y="459.98941"
+       id="text15">«block»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="52.039398"
+       x="269.5582"
+       y="475.05829"
+       id="text16">Passerelle IoT</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="202.2429"
+       x2="388.9129"
+       y1="484.40231"
+       y2="484.40231"
+       id="line16" />
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g16">
+      <circle
+         cx="212.2429"
+         cy="497.35019"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse16"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="68.599098"
+       x="223.2429"
+       y="498.95419"
+       id="text17">HW-ID : MAC Wi-Fi</text>
+    <g
+       data-visibility-modifier="PUBLIC_FIELD"
+       id="g17">
+      <circle
+         cx="212.2429"
+         cy="512.24609"
+         fill="none"
+         style="stroke:#038048;stroke-width:1"
+         id="ellipse17"
+         r="3" />
+    </g>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="158.67"
+       x="223.2429"
+       y="513.84998"
+       id="text18">Mode : Provisioning | Appairage | Normal</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="110.4351"
+       x="209.2429"
+       y="547.64178"
+       id="text19">○ LoRa RF ↔ Nœuds [1..*]</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="135.0748"
+       x="209.2429"
+       y="562.5376"
+       id="text20">○ BLE GATT ↔ App (provisioning)</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="127.3629"
+       x="209.2429"
+       y="577.43347"
+       id="text21">○ HTTPS/API-Key → Hardware API</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="94.531303"
+       x="209.2429"
+       y="592.32928"
+       id="text22">○ MQTT/TLS ↔ Broker</text>
+    <line
+       style="stroke:#444444;stroke-width:1"
+       x1="202.2429"
+       x2="283.72601"
+       y1="529.64191"
+       y2="529.64191"
+       id="line22" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="19.7038"
+       x="285.72601"
+       y="532.24591"
+       id="text23">Ports</text>
+    <line
+       style="stroke:#444444;stroke-width:1"
+       x1="307.42981"
+       x2="388.9129"
+       y1="529.64191"
+       y2="529.64191"
+       id="line23" />
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="ApiEco"
+     data-source-line="71"
+     id="ent0006"
+     transform="translate(-26.0255,-200.8858)">
+    <rect
+       fill="#ffffff"
+       height="159.1669"
+       style="stroke:#444444;stroke-width:0.5"
+       width="179.46651"
+       x="158.6772"
+       y="694.08539"
+       id="rect23" />
+    <rect
+       fill="#b8d9f5"
+       height="38.895901"
+       style="stroke:#444444;stroke-width:0.5"
+       width="179.46651"
+       x="158.6772"
+       y="694.08539"
+       id="rect24" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="7px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="23.113899"
+       x="236.85339"
+       y="708.5683"
+       id="text24">«block»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="92.118797"
+       x="202.351"
+       y="723.63721"
+       id="text25">Écosystème API EauSûre</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="159.6772"
+       x2="337.14359"
+       y1="732.9812"
+       y2="732.9812"
+       id="line25" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="160.0265"
+       x="166.6772"
+       y="766.42902"
+       id="text26">○ Auth API (JWT · OAuth Google/GitHub)</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="98.611298"
+       x="166.6772"
+       y="781.32483"
+       id="text27">○ Profile API (Bearer JWT)</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="156.6425"
+       x="166.6772"
+       y="796.2207"
+       id="text28">○ HW API (Clé API · MQTT · Appairage)</text>
+    <line
+       style="stroke:#444444;stroke-width:1"
+       x1="159.6772"
+       x2="231.1506"
+       y1="748.42908"
+       y2="748.42908"
+       id="line28" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="30.5196"
+       x="233.1506"
+       y="751.03308"
+       id="text29">Services</text>
+    <line
+       style="stroke:#444444;stroke-width:1"
+       x1="265.6702"
+       x2="337.14359"
+       y1="748.42908"
+       y2="748.42908"
+       id="line29" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="116.3071"
+       x="166.6772"
+       y="830.01239"
+       id="text30">○ MongoDB Atlas (Mongoose)</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="163.46651"
+       x="166.6772"
+       y="844.90833"
+       id="text31">○ Broker MQTT (télémétrie · commandes)</text>
+    <line
+       style="stroke:#444444;stroke-width:1"
+       x1="159.6772"
+       x2="237.3105"
+       y1="812.01257"
+       y2="812.01257"
+       id="line31" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="18.1998"
+       x="239.3105"
+       y="814.61652"
+       id="text32">Infra</text>
+    <line
+       style="stroke:#444444;stroke-width:1"
+       x1="259.51031"
+       x2="337.14359"
+       y1="812.01257"
+       y2="812.01257"
+       id="line32" />
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Db"
+     data-source-line="84"
+     id="ent0007"
+     transform="translate(-271.16835,-348.99295)">
+    <rect
+       fill="#ffffff"
+       height="46.895901"
+       style="stroke:#444444;stroke-width:0.5"
+       width="68.303299"
+       x="273.5101"
+       y="928.95819"
+       id="rect32" />
+    <rect
+       fill="#b8d9f5"
+       height="38.895901"
+       style="stroke:#444444;stroke-width:0.5"
+       width="68.303299"
+       x="273.5101"
+       y="928.95819"
+       id="rect33" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="7px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="31.989901"
+       x="291.66681"
+       y="943.44122"
+       id="text33">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="58.303299"
+       x="278.5101"
+       y="958.51007"
+       id="text34">MongoDB Atlas</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="274.5101"
+       x2="340.81339"
+       y1="967.85413"
+       y2="967.85413"
+       id="line34" />
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="Broker"
+     data-source-line="85"
+     id="ent0008"
+     transform="translate(44.545929,-447.8858)">
+    <rect
+       fill="#ffffff"
+       height="46.895901"
+       style="stroke:#444444;stroke-width:0.5"
+       width="59.911301"
+       x="283.6972"
+       y="1025.8541"
+       id="rect34" />
+    <rect
+       fill="#b8d9f5"
+       height="38.895901"
+       style="stroke:#444444;stroke-width:0.5"
+       width="59.911301"
+       x="283.6972"
+       y="1025.8541"
+       id="rect35" />
+    <text
+       fill="#555555"
+       font-family="Arial"
+       font-size="7px"
+       font-style="italic"
+       lengthAdjust="spacing"
+       textLength="31.989901"
+       x="297.6579"
+       y="1040.3372"
+       id="text35">«external»</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="49.911301"
+       x="288.6972"
+       y="1055.406"
+       id="text36">Broker MQTT</text>
+    <line
+       style="stroke:#444444;stroke-width:0.5"
+       x1="284.6972"
+       x2="342.60849"
+       y1="1064.75"
+       y2="1064.75"
+       id="line36" />
+  </g>
+  <g
+     class="entity"
+     data-qualified-name="NoteJWT"
+     data-source-line="123"
+     id="ent0023"
+     transform="translate(-26.0255,-200.8858)">
+    <path
+       d="m 26.2755,553.9857 v 46.6876 h 136.4466 v -36.6876 l -10,-10 H 26.2755"
+       fill="#fffff0"
+       style="stroke:#bbbb00;stroke-width:0.5"
+       id="path36" />
+    <path
+       d="m 152.7221,553.9857 v 10 h 10 l -10,-10"
+       fill="#fffff0"
+       style="stroke:#bbbb00;stroke-width:1"
+       id="path37" />
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       font-weight="bold"
+       lengthAdjust="spacing"
+       textLength="46.679401"
+       x="34.275501"
+       y="569.5376"
+       id="text37">JWT_SECRET</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="29.5196"
+       x="83.034897"
+       y="569.5376"
+       id="text38">partagé</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="111.4466"
+       x="34.275501"
+       y="580.43347"
+       id="text39">par variable d'environnement</text>
+    <text
+       fill="#000000"
+       font-family="Arial"
+       font-size="8px"
+       lengthAdjust="spacing"
+       textLength="108.5507"
+       x="34.275501"
+       y="591.32928"
+       id="text40">- aucun appel inter-services</text>
+  </g>
+  <line
+     style="stroke:#181818;stroke-width:0.701814"
+     x1="202.68541"
+     x2="202.68541"
+     y1="146.06299"
+     y2="244.62061"
+     id="line42" />
+  <polygon
+     fill="#181818"
+     points="276.7109,440.5064 272.7109,436.5064 276.7109,445.5064 280.7109,436.5064 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon42"
+     transform="translate(-74.0255,-200.8858)" />
+  <polygon
+     fill="#181818"
+     points="224.6415,224.4068 228.6415,220.4068 232.6415,224.4068 228.6415,215.4068 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon43"
+     transform="translate(-26.0255,-74.885803)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="48.2691"
+     x="219.0618"
+     y="318.79459"
+     id="text43"
+     transform="rotate(-90,156.44766,278.78595)">LoRa RF</text>
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="230.5757"
+     x2="230.5757"
+     y1="142.521"
+     y2="162.521"
+     id="line43" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="230.5757"
+     x2="442.25858"
+     y1="162.521"
+     y2="162.521"
+     id="line44" />
+  <line
+     style="stroke:#181818;stroke-width:0.573003"
+     x1="442.25858"
+     x2="442.25858"
+     y1="162.20454"
+     y2="224.62061"
+     id="line45" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="442.25858"
+     x2="288.41937"
+     y1="224.62061"
+     y2="224.62061"
+     id="line46" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="288.41937"
+     x2="288.41937"
+     y1="224.62061"
+     y2="244.62061"
+     id="line47" />
+  <polygon
+     fill="#181818"
+     points="314.4449,440.5064 310.4449,436.5064 314.4449,445.5064 318.4449,436.5064 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon47"
+     transform="translate(-26.0255,-200.8858)" />
+  <polygon
+     fill="#181818"
+     points="252.6012,224.4068 256.6012,220.4068 260.6012,224.4068 256.6012,215.4068 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon48"
+     transform="translate(-26.0255,-74.885803)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="95.433098"
+     x="330.97089"
+     y="309.94159"
+     id="text48"
+     transform="translate(-26.0255,-116.8858)">Wi-Fi AP + HTTP</text>
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="167.19321"
+     x="291.71091"
+     y="327.64761"
+     id="text49"
+     transform="translate(-26.0255,-116.8858)">(/identity·/prove·/provision)</text>
+  <line
+     style="stroke:#181818;stroke-width:0.851572"
+     x1="146.69661"
+     x2="146.69661"
+     y1="140.57808"
+     y2="473.19958"
+     id="line49" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="146.69661"
+     x2="192.4738"
+     y1="473.19958"
+     y2="473.19958"
+     id="line50" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="192.4738"
+     x2="192.4738"
+     y1="473.19958"
+     y2="493.19958"
+     id="line51" />
+  <polygon
+     fill="#181818"
+     points="218.4993,689.0854 214.4993,685.0854 218.4993,694.0854 222.4993,685.0854 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon51"
+     transform="translate(-26.0255,-200.8858)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="39.091"
+     x="73.505501"
+     y="389.99139"
+     id="text51"
+     transform="rotate(-90,29.399928,300.34541)">HTTPS</text>
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="147.3421"
+     x="16"
+     y="407.69751"
+     id="text52"
+     transform="rotate(-90,29.399928,300.34541)">(/api/registry/pair-node)</text>
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="269.5524"
+     x2="269.5524"
+     y1="399.78748"
+     y2="473.19958"
+     id="line52" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="269.5524"
+     x2="252.29601"
+     y1="473.19958"
+     y2="473.19958"
+     id="line53" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="252.29601"
+     x2="252.29601"
+     y1="473.19958"
+     y2="493.19958"
+     id="line54" />
+  <polygon
+     fill="#181818"
+     points="278.3215,689.0854 274.3215,685.0854 278.3215,694.0854 282.3215,685.0854 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon54"
+     transform="translate(-26.0255,-200.8858)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="93.548103"
+     x="362.26089"
+     y="638.57031"
+     id="text54"
+     transform="matrix(1.0305177,0,0,1.0305177,-213.11341,-220.37736)">HTTPS / Clé API</text>
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="206.15421"
+     x="302.57791"
+     y="656.27631"
+     id="text55"
+     transform="matrix(0.53557464,0,0,0.53557464,-8.707346,95.15846)">(/api/sensor-data · /api/registry/*)</text>
+  <line
+     style="stroke:#181818;stroke-width:0.659902"
+     x1="340.66113"
+     x2="340.66113"
+     y1="402.32748"
+     y2="574.41699"
+     id="line57" />
+  <line
+     style="stroke:#181818;stroke-width:0.801954"
+     x1="444.85388"
+     x2="312.06812"
+     y1="635.98694"
+     y2="635.98694"
+     id="line58" />
+  <line
+     style="stroke:#181818;stroke-width:1.23834"
+     x1="444.43655"
+     x2="444.43655"
+     y1="605.68604"
+     y2="636.35577"
+     id="line59" />
+  <polygon
+     fill="#181818"
+     points="315.644,1016.8541 319.644,1025.8541 323.644,1016.8541 319.644,1020.8541 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon59"
+     transform="translate(21.010215,-447.81437)" />
+  <polygon
+     fill="#181818"
+     points="342.7454,605.6733 346.7454,609.6733 342.7454,600.6733 338.7454,609.6733 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon60"
+     transform="translate(-2.0255,-200.8858)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="62.413101"
+     x="454.319"
+     y="901.14917"
+     id="text60"
+     transform="rotate(90,609.97659,637.75019)">MQTT/TLS</text>
+  <line
+     style="stroke:#181818;stroke-width:0.978867"
+     x1="492.50861"
+     x2="492.50861"
+     y1="151.20859"
+     y2="231.13242"
+     id="line60" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="492.50861"
+     x2="326.15338"
+     y1="230.62061"
+     y2="230.62061"
+     id="line61" />
+  <line
+     style="stroke:#181818;stroke-width:1.20527"
+     x1="326.15338"
+     x2="326.15338"
+     y1="230.09381"
+     y2="244.62061"
+     id="line62" />
+  <polygon
+     fill="#181818"
+     points="352.1789,440.5064 348.1789,436.5064 352.1789,445.5064 356.1789,436.5064 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon62"
+     transform="translate(-26.0255,-200.8858)" />
+  <polygon
+     fill="#181818"
+     points="518.5341,357.0944 522.5341,361.0944 518.5341,352.0944 514.5341,361.0944 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon63"
+     transform="translate(-26.0255,-200.8858)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="22.49"
+     x="486.66409"
+     y="398.84439"
+     id="text63"
+     transform="translate(-26.0255,-200.8858)">BLE</text>
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="511.68451"
+     x2="511.68451"
+     y1="151.20859"
+     y2="473.19958"
+     id="line63" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="511.68451"
+     x2="282.20709"
+     y1="473.19958"
+     y2="473.19958"
+     id="line64" />
+  <line
+     style="stroke:#181818;stroke-width:1"
+     x1="282.20709"
+     x2="282.20709"
+     y1="473.19958"
+     y2="493.19958"
+     id="line65" />
+  <polygon
+     fill="#181818"
+     points="308.2326,689.0854 304.2326,685.0854 308.2326,694.0854 312.2326,685.0854 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon65"
+     transform="translate(-26.0255,-200.8858)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="73.5541"
+     x="454.77591"
+     y="528.13391"
+     id="text65"
+     transform="translate(-26.0255,-200.8858)">HTTPS / JWT</text>
+  <line
+     style="stroke:#181818;stroke-width:0.813845"
+     x1="530.86029"
+     x2="530.86029"
+     y1="151.20859"
+     y2="590.84552"
+     id="line66" />
+  <line
+     style="stroke:#181818;stroke-width:0.781549"
+     x1="530.86029"
+     x2="393.2681"
+     y1="590.55792"
+     y2="590.55792"
+     id="line67" />
+  <polygon
+     fill="#181818"
+     points="327.6263,1016.8541 331.6263,1025.8541 335.6263,1016.8541 331.6263,1020.8541 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon68"
+     transform="rotate(90,577.85054,836.74022)" />
+  <polygon
+     fill="#181818"
+     points="556.8858,357.0944 560.8858,361.0944 556.8858,352.0944 552.8858,361.0944 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon69"
+     transform="translate(-26.0255,-200.8858)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="36.400101"
+     x="567.26581"
+     y="778.71283"
+     id="text69"
+     transform="translate(-120.09451,-192.57533)">MQTT</text>
+  <line
+     style="stroke:#181818;stroke-width:1.03812"
+     x1="132.5493"
+     x2="72.182549"
+     y1="598.75604"
+     y2="598.75604"
+     id="line71" />
+  <line
+     style="stroke:#181818;stroke-width:0.997418"
+     x1="444.91837"
+     x2="389.49963"
+     y1="606.19427"
+     y2="606.19427"
+     id="line71-7" />
+  <polygon
+     fill="#181818"
+     points="300.2779,919.9582 296.2779,923.9582 292.2779,919.9582 296.2779,928.9582 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon71"
+     transform="matrix(0,0.9944884,-1.0892852,0,1084.0829,304.1111)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="64.974098"
+     x="221.9238"
+     y="901.14917"
+     id="text71"
+     transform="matrix(0.68094719,0,0,0.68094719,-66.308422,-20.689473)">Mongoose</text>
+  <polygon
+     fill="#181818"
+     points="295.6795,1020.8541 291.6795,1016.8541 295.6795,1025.8541 299.6795,1016.8541 "
+     style="stroke:#181818;stroke-width:1"
+     id="polygon74"
+     transform="rotate(90,552.24733,862.81386)" />
+  <text
+     fill="#000000"
+     font-family="Arial"
+     font-size="13px"
+     lengthAdjust="spacing"
+     textLength="36.400101"
+     x="157.7637"
+     y="957.4502"
+     id="text74"
+     transform="matrix(0,0.63770737,-0.63770737,0,1060.0438,507.71387)">MQTT</text>
+  <line
+     style="stroke:#181818;stroke-width:1;stroke-dasharray:7, 7"
+     x1="68.473305"
+     x2="68.473305"
+     y1="399.78748"
+     y2="483.19958"
+     id="line75" />
+  <line
+     style="stroke:#181818;stroke-width:1;stroke-dasharray:7, 7"
+     x1="68.473305"
+     x2="162.5627"
+     y1="483.19958"
+     y2="483.19958"
+     id="line76" />
+  <line
+     style="stroke:#181818;stroke-width:1;stroke-dasharray:7, 7"
+     x1="162.5627"
+     x2="162.5627"
+     y1="483.19958"
+     y2="493.19958"
+     id="line77" />
+  <metadata
+     id="metadata77">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>&lt;b&gt;BDD Global — Système EauSûre&lt;/b&gt;
+&lt;i&gt;Vue d'ensemble · IoT &amp; Systèmes Embarqués&lt;/i&gt;</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
